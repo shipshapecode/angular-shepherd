@@ -2,7 +2,7 @@
   "name": "shepherd",
   "version": "0.0.1",
   "dependencies": {
-    "disable-scroll": "0.3.0",
+    "disable-scroll": "0.4.1",
     "shepherd.js": "^2.3.3"
   },
   "peerDependencies": {

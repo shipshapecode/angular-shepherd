@@ -1,0 +1,12 @@
+{
+  "name": "shepherd",
+  "version": "0.0.1",
+  "dependencies": {
+    "disable-scroll": "0.3.0",
+    "shepherd.js": "^2.3.3"
+  },
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  }
+}

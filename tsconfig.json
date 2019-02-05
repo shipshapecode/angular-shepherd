@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "shepherd": [
+        "dist/shepherd"
+      ],
+      "shepherd/*": [
+        "dist/shepherd/*"
+      ]
+    }
   }
 }

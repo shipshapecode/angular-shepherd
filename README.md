@@ -1,5 +1,7 @@
 # AngularShepherd
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/shipshapecode/angular-shepherd.svg)](https://greenkeeper.io/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 ## Development server

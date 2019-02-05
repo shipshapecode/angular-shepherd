@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import disableScroll from 'disable-scroll';
 import Shepherd from 'shepherd.js';
 import { elementIsHidden } from 'utils/dom';
 import { normalizeAttachTo } from 'utils/attachTo';

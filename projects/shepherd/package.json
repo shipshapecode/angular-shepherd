@@ -1,5 +1,5 @@
 {
-  "name": "shepherd",
+  "name": "angular-shepherd",
   "version": "0.0.1",
   "dependencies": {
     "disable-scroll": "0.3.0",

@@ -37,6 +37,134 @@
           }
         }
       }
+    },
+    "shepherd-tester": {
+      "root": "projects/shepherd-tester/",
+      "sourceRoot": "projects/shepherd-tester/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/shepherd-tester",
+            "index": "projects/shepherd-tester/src/index.html",
+            "main": "projects/shepherd-tester/src/main.ts",
+            "polyfills": "projects/shepherd-tester/src/polyfills.ts",
+            "tsConfig": "projects/shepherd-tester/tsconfig.app.json",
+            "assets": [
+              "projects/shepherd-tester/src/favicon.ico",
+              "projects/shepherd-tester/src/assets"
+            ],
+            "styles": [
+              "projects/shepherd-tester/src/styles.css"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/shepherd-tester/src/environments/environment.ts",
+                  "with": "projects/shepherd-tester/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "shepherd-tester:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "shepherd-tester:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "shepherd-tester:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/shepherd-tester/src/test.ts",
+            "polyfills": "projects/shepherd-tester/src/polyfills.ts",
+            "tsConfig": "projects/shepherd-tester/tsconfig.spec.json",
+            "karmaConfig": "projects/shepherd-tester/karma.conf.js",
+            "styles": [
+              "projects/shepherd-tester/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/shepherd-tester/src/favicon.ico",
+              "projects/shepherd-tester/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/shepherd-tester/tsconfig.app.json",
+              "projects/shepherd-tester/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "shepherd-tester-e2e": {
+      "root": "projects/shepherd-tester-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/shepherd-tester-e2e/protractor.conf.js",
+            "devServerTarget": "shepherd-tester:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "shepherd-tester:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/shepherd-tester-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "shepherd"

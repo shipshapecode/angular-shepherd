@@ -133,7 +133,7 @@ export class ShepherdService implements OnDestroy {
     if (!steps || !Array.isArray(steps) || steps.length === 0) {
       return;
     }
-    /* istanbul ignore next: also can't test this due to things attached to root blowing up tests */
+
     if (!this.requiredElementsPresent()) {
       tour.addStep('error', {
         buttons: [{

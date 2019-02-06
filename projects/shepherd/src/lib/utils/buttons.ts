@@ -20,10 +20,8 @@ export function makeButton(button) {
     throw new Error(`'type' property must be one of 'back', 'cancel', or 'next'`);
   }
 
-  const action = this[type]();
-
   return {
-    action,
+    action: this[type].bind(this),
     classes,
     text
   };

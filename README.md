@@ -1,27 +1,17 @@
-# AngularShepherd
+# angular-shepherd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+<a href="https://shipshape.io/"><img src="http://i.imgur.com/DWHQjA5.png" alt="Ship Shape" width="100" height="100"/></a>
 
-## Development server
+**[angular-shepherd is built and maintained by Ship Shape. Contact us for web app consulting, development, and training for your project](https://shipshape.io/)**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[![npm version](https://badge.fury.io/js/angular-shepherd.svg)](http://badge.fury.io/js/angular-shepherd)
+![Download count all time](https://img.shields.io/npm/dt/angular-shepherd.svg)
+[![npm](https://img.shields.io/npm/dm/angular-shepherd.svg)]()
+[![Build Status](https://travis-ci.org/shipshapecode/angular-shepherd.svg)](https://travis-ci.org/shipshapecode/angular-shepherd)
+[![Code Climate](https://codeclimate.com/github/shipshapecode/angular-shepherd/badges/gpa.svg)](https://codeclimate.com/github/shipshapecode/angular-shepherd)
+[![Test Coverage](https://codeclimate.com/github/shipshapecode/angular-shepherd/badges/coverage.svg)](https://codeclimate.com/github/shipshapecode/angular-shepherd/coverage)
+[![Greenkeeper badge](https://badges.greenkeeper.io/shipshapecode/angular-shepherd.svg)](https://greenkeeper.io/)
 
-## Code scaffolding
+This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library. It provides additional functionality, on top of Shepherd, as well.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This is currently a WIP, but hopefully will be ready for use soon!

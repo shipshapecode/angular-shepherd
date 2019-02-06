@@ -1,15 +1,25 @@
 import { Injectable } from '@angular/core';
 import disableScroll from 'disable-scroll';
 import Shepherd from 'shepherd.js';
-import { elementIsHidden } from 'utils/dom';
-import { normalizeAttachTo } from 'utils/attachTo';
+import { elementIsHidden } from './utils/dom';
+import { makeButton } from './utils/buttons';
+import { normalizeAttachTo } from './utils/attachTo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShepherdService {
-
-  tourObject: object = null;
+  confirmCancel = false;
+  confirmCancelMessage: string = null;
+  defaultStepOptions: object = {};
+  disableScroll = false;
+  errorTitle = null;
+  isActive = false;
+  messageForUser: string = null;
+  modal = false;
+  requiredElements = [];
+  steps = [];
+  tourObject: Shepherd = null;
 
   constructor() {
     this._initialize();
@@ -64,14 +74,36 @@ export class ShepherdService {
             elem.scrollIntoView();
           }
 
-          later(() => {
-            if (get(this, 'disableScroll')) {
+          setTimeout(() => {
+            if (this.disableScroll) {
               disableScroll.on(window);
             }
           }, 50);
         };
       }
     });
+  }
+
+  /**
+   * Observes the array of requiredElements, which are the elements that must be present at the start of the tour,
+   * and determines if they exist, and are visible, if either is false, it will stop the tour from executing.
+   * @private
+   */
+  requiredElementsPresent() {
+    let allElementsPresent = true;
+
+    /* istanbul ignore next: also can't test this due to things attached to root blowing up tests */
+    this.requiredElements.forEach((element) => {
+      const selectedElement = document.querySelector(element.selector);
+
+      if (allElementsPresent && (!selectedElement || elementIsHidden(selectedElement))) {
+        allElementsPresent = false;
+        this.errorTitle = element.title;
+        this.messageForUser = element.message;
+      }
+    });
+
+    return allElementsPresent;
   }
 
   /**

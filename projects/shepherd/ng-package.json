@@ -3,5 +3,9 @@
   "dest": "../../dist/shepherd",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "disable-scroll",
+    "shepherd.js"
+  ]
 }

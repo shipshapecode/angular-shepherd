@@ -59,7 +59,7 @@ In that component you will want to use `AfterViewInit` to `addSteps` to the Shep
 
 ```typescript
 import { Component, AfterViewInit } from '@angular/core';
-import { ShepherdService } from '../../../../shepherd/src/lib/shepherd.service';
+import { ShepherdService } from 'angular-shepherd';
 import { steps as defaultSteps, defaultStepOptions} from '../data';
 
 @Component({

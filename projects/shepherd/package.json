@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "An Angular wrapper for the site tour library Shepherd.",
   "keywords": [
+    "angular",
+    "shepherd",
     "site tour",
-    "tour",
-    "shepherd"
+    "tour"
   ],
   "repository": "https://github.com/shipshapecode/angular-shepherd",
   "license": "MIT",

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import disableScroll from 'disable-scroll';
 import Shepherd from 'shepherd.js';
 import { elementIsHidden } from './utils/dom';
@@ -8,7 +8,7 @@ import { normalizeAttachTo } from './utils/attachTo';
 @Injectable({
   providedIn: 'root'
 })
-export class ShepherdService {
+export class ShepherdService implements OnDestroy {
   confirmCancel = false;
   confirmCancelMessage: string = null;
   defaultStepOptions: object = {};
@@ -19,11 +19,105 @@ export class ShepherdService {
   modal = false;
   requiredElements = [];
   steps = [];
+  tourName = undefined;
   tourObject: Shepherd = null;
 
   constructor() {
-    this._initialize();
-    console.log(this.tourObject);
+  }
+
+  ngOnDestroy() {
+    this._cleanup();
+  }
+
+  /**
+   * Get the tour object and call back
+   * @public
+   */
+  back() {
+    this.tourObject.back();
+    // this.trigger('back');
+  }
+
+  /**
+   * Cancel the tour
+   * @public
+   */
+  cancel() {
+    this.tourObject.cancel();
+  }
+
+  /**
+   * Complete the tour
+   * @public
+   */
+  complete() {
+    this.tourObject.complete();
+  }
+
+  /**
+   * Hides the current step
+   * @public
+   */
+  hide() {
+    this.tourObject.hide();
+  }
+
+  /**
+   * Advance the tour to the next step and trigger next
+   * @public
+   */
+  next() {
+    this.tourObject.next();
+    // this.trigger('next');
+  }
+
+  /**
+   * Show a specific step, by passing its id
+   * @param id The id of the step you want to show
+   * @public
+   */
+  show(id) {
+    this.tourObject.show(id);
+  }
+
+  /**
+   * Start the tour
+   * @public
+   */
+  start() {
+    this.isActive = true;
+    this.tourObject.start();
+  }
+
+  /**
+   * When the tour starts, setup the step event listeners, and disableScroll
+   */
+  onTourStart() {
+    if (this.disableScroll) {
+      disableScroll.on(window);
+    }
+
+    // this.trigger('start');
+  }
+
+  /**
+   * This function is called when a tour is completed or cancelled to initiate cleanup.
+   * @param {string} completeOrCancel 'complete' or 'cancel'
+   */
+  onTourFinish(completeOrCancel) {
+    this.isActive = false;
+    this._cleanup();
+    // this.trigger(completeOrCancel);
+  }
+
+  /**
+   * Cleanup disableScroll
+   * @private
+   */
+  _cleanup() {
+    if (this.disableScroll) {
+      disableScroll.off(window);
+    }
   }
 
   /**
@@ -112,11 +206,17 @@ export class ShepherdService {
    */
   _initialize() {
     const tourObject = new Shepherd.Tour({
-      confirmCancel: true,
-      confirmCancelMessage: 'Test',
-      tourName: 'Test Tour Name',
-      useModalOverlay: true
+      confirmCancel: this.confirmCancel,
+      confirmCancelMessage: this.confirmCancelMessage,
+      defaultStepOptions: this.defaultStepOptions,
+      tourName: this.tourName,
+      useModalOverlay: this.modal
     });
+
+    // TODO: Figure out events and triggering them
+    // tourObject.on('start', bind(this, 'onTourStart'));
+    // tourObject.on('complete', bind(this, 'onTourFinish', 'complete'));
+    // tourObject.on('cancel', bind(this, 'onTourFinish', 'cancel'));
 
     this.tourObject = tourObject;
   }

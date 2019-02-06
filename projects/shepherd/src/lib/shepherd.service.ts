@@ -35,7 +35,6 @@ export class ShepherdService implements OnDestroy {
    */
   back() {
     this.tourObject.back();
-    // this.trigger('back');
   }
 
   /**
@@ -63,12 +62,11 @@ export class ShepherdService implements OnDestroy {
   }
 
   /**
-   * Advance the tour to the next step and trigger next
+   * Advance the tour to the next step
    * @public
    */
   next() {
     this.tourObject.next();
-    // this.trigger('next');
   }
 
   /**
@@ -96,8 +94,6 @@ export class ShepherdService implements OnDestroy {
     if (this.disableScroll) {
       disableScroll.on(window);
     }
-
-    // this.trigger('start');
   }
 
   /**
@@ -107,7 +103,6 @@ export class ShepherdService implements OnDestroy {
   onTourFinish(completeOrCancel) {
     this.isActive = false;
     this._cleanup();
-    // this.trigger(completeOrCancel);
   }
 
   /**
@@ -213,10 +208,9 @@ export class ShepherdService implements OnDestroy {
       useModalOverlay: this.modal
     });
 
-    // TODO: Figure out events and triggering them
-    // tourObject.on('start', bind(this, 'onTourStart'));
-    // tourObject.on('complete', bind(this, 'onTourFinish', 'complete'));
-    // tourObject.on('cancel', bind(this, 'onTourFinish', 'cancel'));
+    tourObject.on('start', this.onTourStart.bind(this));
+    tourObject.on('complete', this.onTourFinish.bind(this, 'complete'));
+    tourObject.on('cancel', this.onTourFinish.bind(this, 'cancel'));
 
     this.tourObject = tourObject;
   }

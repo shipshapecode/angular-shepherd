@@ -26,26 +26,33 @@ npm install angular-shepherd --save
 **NOTE: This may not be the proper Angular way to do everything, as I am not
 an Angular dev, so please let me know if you have suggestions!**
 
-First, you will want to include the Shepherd styles in your application component template.
-To import from `node_modules`, you will need to use `ViewEncapsulation.None` and add the
-`node_modules` relative path to your `styleUrls`.
+First, you will want to include the Shepherd styles in your angular application. If you are using angular cli you can import the styles in the styles section of angular.json. 
 
-```typescript
-// app.component.ts
-
-import { Component, ViewEncapsulation } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  encapsulation: ViewEncapsulation.None,
-  templateUrl: './app.component.html',
-  styleUrls: [
-    './app.component.css',
-    '../../../../node_modules/shepherd.js/dist/css/shepherd-theme-default.css'
-  ]
-})
-export class AppComponent {
-  title = 'shepherd-tester';
+```json
+{
+  "projects": {
+    "app": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "styles": [
+              "node_modules/shepherd.js/dist/css/shepherd-theme-default.css",
+              "src/styles.scss"
+            ],
+          },
+        },
+        "test": {
+          "options": {
+            "styles": [
+              "node_modules/shepherd.js/dist/css/shepherd-theme-default.css",
+              "src/styles.scss"
+            ],
+          }
+        },
+      }
+    },
+  },
 }
 ```
 

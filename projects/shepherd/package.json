@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "disable-scroll": "0.3.0",
-    "shepherd.js": "^2.3.3"
+    "shepherd.js": "^2.5.0"
   },
   "peerDependencies": {
     "@angular/common": "^7.2.0",

@@ -1,6 +1,6 @@
 {
   "name": "angular-shepherd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An Angular wrapper for the site tour library Shepherd.",
   "keywords": [
     "angular",

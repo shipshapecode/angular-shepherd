@@ -15,6 +15,11 @@
 This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library. 
 It provides additional functionality, on top of Shepherd, as well.
 
+## Compatibility
+
+This has not been tested in anything but Angular 7. It may or may not work in previous versions or subsequent versions
+of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!
+
 ## Installation
 
 ```bash

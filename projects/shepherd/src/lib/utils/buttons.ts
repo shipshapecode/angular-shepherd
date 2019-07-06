@@ -5,8 +5,6 @@
  * @param button.classes Classes to apply to the button
  * @param button.text The text for the button
  * @param button.action The action to call
- * @returns {{action: *, classes: *, text: *}}
- * @private
  */
 export function makeButton(button) {
   const { type, classes, text } = button;

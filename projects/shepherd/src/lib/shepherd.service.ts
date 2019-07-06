@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import Shepherd from 'shepherd.js';
 import { elementIsHidden } from './utils/dom';
 import { makeButton } from './utils/buttons';
-import { normalizeAttachTo } from './utils/attachTo';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +25,6 @@ export class ShepherdService {
 
   /**
    * Get the tour object and call back
-   * @public
    */
   back() {
     this.tourObject.back();
@@ -34,7 +32,6 @@ export class ShepherdService {
 
   /**
    * Cancel the tour
-   * @public
    */
   cancel() {
     this.tourObject.cancel();
@@ -42,7 +39,6 @@ export class ShepherdService {
 
   /**
    * Complete the tour
-   * @public
    */
   complete() {
     this.tourObject.complete();
@@ -50,7 +46,6 @@ export class ShepherdService {
 
   /**
    * Hides the current step
-   * @public
    */
   hide() {
     this.tourObject.hide();
@@ -58,7 +53,6 @@ export class ShepherdService {
 
   /**
    * Advance the tour to the next step
-   * @public
    */
   next() {
     this.tourObject.next();
@@ -67,7 +61,6 @@ export class ShepherdService {
   /**
    * Show a specific step, by passing its id
    * @param id The id of the step you want to show
-   * @public
    */
   show(id) {
     this.tourObject.show(id);
@@ -75,7 +68,6 @@ export class ShepherdService {
 
   /**
    * Start the tour
-   * @public
    */
   start() {
     this.isActive = true;
@@ -84,18 +76,17 @@ export class ShepherdService {
 
   /**
    * This function is called when a tour is completed or cancelled to initiate cleanup.
-   * @param {string} completeOrCancel 'complete' or 'cancel'
+   * @param completeOrCancel 'complete' or 'cancel'
    */
-  onTourFinish(completeOrCancel) {
+  onTourFinish(completeOrCancel: string) {
     this.isActive = false;
   }
 
   /**
    * Take a set of steps and create a tour object based on the current configuration
-   * @param {Array} steps An array of steps
-   * @private
+   * @param steps An array of steps
    */
-  addSteps(steps) {
+  private addSteps(steps: Array<any>) {
     this._initialize();
     const tour = this.tourObject;
 
@@ -116,14 +107,13 @@ export class ShepherdService {
       return;
     }
 
-    steps.forEach((step, index) => {
+    steps.forEach((step) => {
       const { id, options } = step;
 
       if (options.buttons) {
         options.buttons = options.buttons.map(makeButton.bind(this), this);
       }
 
-      options.attachTo = normalizeAttachTo(options.attachTo);
       tour.addStep(id, options);
     });
   }
@@ -131,9 +121,8 @@ export class ShepherdService {
   /**
    * Observes the array of requiredElements, which are the elements that must be present at the start of the tour,
    * and determines if they exist, and are visible, if either is false, it will stop the tour from executing.
-   * @private
    */
-  requiredElementsPresent() {
+  private requiredElementsPresent() {
     let allElementsPresent = true;
 
     /* istanbul ignore next: also can't test this due to things attached to root blowing up tests */
@@ -152,9 +141,8 @@ export class ShepherdService {
 
   /**
    * Initializes the tour, creates a new Shepherd.Tour. sets options, and binds events
-   * @private
    */
-  _initialize() {
+  private _initialize() {
     const tourObject = new Shepherd.Tour({
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,

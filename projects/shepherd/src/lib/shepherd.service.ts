@@ -1,5 +1,4 @@
-import { Injectable, OnDestroy } from '@angular/core';
-import disableScroll from 'disable-scroll';
+import { Injectable } from '@angular/core';
 import Shepherd from 'shepherd.js';
 import { elementIsHidden } from './utils/dom';
 import { makeButton } from './utils/buttons';
@@ -8,7 +7,7 @@ import { normalizeAttachTo } from './utils/attachTo';
 @Injectable({
   providedIn: 'root'
 })
-export class ShepherdService implements OnDestroy {
+export class ShepherdService {
   confirmCancel = false;
   confirmCancelMessage: string = null;
   defaultStepOptions: object = {};
@@ -23,10 +22,6 @@ export class ShepherdService implements OnDestroy {
   tourObject: Shepherd = null;
 
   constructor() {
-  }
-
-  ngOnDestroy() {
-    this._cleanup();
   }
 
   /**
@@ -88,31 +83,11 @@ export class ShepherdService implements OnDestroy {
   }
 
   /**
-   * When the tour starts, setup the step event listeners, and disableScroll
-   */
-  onTourStart() {
-    if (this.disableScroll) {
-      disableScroll.on(window);
-    }
-  }
-
-  /**
    * This function is called when a tour is completed or cancelled to initiate cleanup.
    * @param {string} completeOrCancel 'complete' or 'cancel'
    */
   onTourFinish(completeOrCancel) {
     this.isActive = false;
-    this._cleanup();
-  }
-
-  /**
-   * Cleanup disableScroll
-   * @private
-   */
-  _cleanup() {
-    if (this.disableScroll) {
-      disableScroll.off(window);
-    }
   }
 
   /**
@@ -150,26 +125,6 @@ export class ShepherdService implements OnDestroy {
 
       options.attachTo = normalizeAttachTo(options.attachTo);
       tour.addStep(id, options);
-
-      // Step up events for the current step
-      const currentStep = tour.steps[index];
-
-      if (!currentStep.options.scrollToHandler) {
-        currentStep.options.scrollToHandler = (elem) => {
-          // Allow scrolling so scrollTo works.
-          disableScroll.off(window);
-
-          if (typeof elem !== 'undefined') {
-            elem.scrollIntoView();
-          }
-
-          setTimeout(() => {
-            if (this.disableScroll) {
-              disableScroll.on(window);
-            }
-          }, 50);
-        };
-      }
     });
   }
 
@@ -208,7 +163,6 @@ export class ShepherdService implements OnDestroy {
       useModalOverlay: this.modal
     });
 
-    tourObject.on('start', this.onTourStart.bind(this));
     tourObject.on('complete', this.onTourFinish.bind(this, 'complete'));
     tourObject.on('cancel', this.onTourFinish.bind(this, 'cancel'));
 

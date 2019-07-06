@@ -86,7 +86,7 @@ export class ShepherdService {
    * Take a set of steps and create a tour object based on the current configuration
    * @param steps An array of steps
    */
-  private addSteps(steps: Array<any>) {
+  addSteps(steps: Array<any>) {
     this._initialize();
     const tour = this.tourObject;
 

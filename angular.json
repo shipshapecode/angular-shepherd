@@ -58,7 +58,6 @@
               "projects/shepherd-tester/src/assets"
             ],
             "styles": [
-              "node_modules/shepherd.js/dist/css/shepherd-theme-default.css",
               "projects/shepherd-tester/src/styles.css"
             ],
             "scripts": [],

@@ -18,7 +18,7 @@ export class ShepherdService {
   requiredElements = [];
   steps = [];
   tourName = undefined;
-  tourObject: Shepherd = null;
+  tourObject: Shepherd.Tour = null;
 
   constructor() {
   }
@@ -96,11 +96,12 @@ export class ShepherdService {
     }
 
     if (!this.requiredElementsPresent()) {
-      tour.addStep('error', {
+      tour.addStep({
         buttons: [{
           text: 'Exit',
           action: tour.cancel
         }],
+        id: 'error',
         title: this.errorTitle,
         text: [this.messageForUser]
       });
@@ -108,13 +109,11 @@ export class ShepherdService {
     }
 
     steps.forEach((step) => {
-      const { id, options } = step;
-
-      if (options.buttons) {
-        options.buttons = options.buttons.map(makeButton.bind(this), this);
+      if (step.buttons) {
+        step.buttons = step.buttons.map(makeButton.bind(this), this);
       }
 
-      tour.addStep(id, options);
+      tour.addStep(step);
     });
   }
 

@@ -17,7 +17,7 @@ It provides additional functionality, on top of Shepherd, as well.
 
 ## Compatibility
 
-This has not been tested in anything but Angular 7. It may or may not work in previous versions or subsequent versions
+This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions
 of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!
 
 ## Installation
@@ -30,36 +30,6 @@ npm install angular-shepherd --save
 
 **NOTE: This may not be the proper Angular way to do everything, as I am not
 an Angular dev, so please let me know if you have suggestions!**
-
-First, you will want to include the Shepherd styles in your angular application. If you are using angular cli you can import the styles in the styles section of angular.json. 
-
-```json
-{
-  "projects": {
-    "app": {
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "styles": [
-              "node_modules/shepherd.js/dist/css/shepherd-theme-default.css",
-              "src/styles.scss"
-            ],
-          },
-        },
-        "test": {
-          "options": {
-            "styles": [
-              "node_modules/shepherd.js/dist/css/shepherd-theme-default.css",
-              "src/styles.scss"
-            ],
-          }
-        },
-      }
-    },
-  },
-}
-```
 
 Then, you will need to inject the `ShepherdService` to be able to interact with Shepherd and 
 call `addSteps` to add your steps, `start` to start the tour, etc.
@@ -228,17 +198,6 @@ this.shepherdService.addSteps([
 
 A lot of the options are the same as Shepherd options, but I will go through each of them for reference.
 
-
-#### id
-
-The name to give this step of the tour
-
-
-#### options
-
-An object with all of the options for the step
-
-
 ##### attachTo
 
 The selector and position for the tour popup to attach to, of the format 'selector position'. 
@@ -292,6 +251,9 @@ It can be any string. Just style that class name in your CSS.
 
 > **default value:** ``
 
+#### id
+
+The name to give this step of the tour
 
 ##### scrollTo
 
@@ -355,11 +317,8 @@ Extra options to pass to [Tippy](https://atomiks.github.io/tippyjs/#all-options)
 
 The text content to display in the tour popup. Can be:
 + a string
-+ an array of strings
 + an HTML element
 + a function returning any of the above
-
-Currently does ***not*** accept htmlbars input (PR welcome).
 
 > **default value:** `null`
 

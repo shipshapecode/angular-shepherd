@@ -16,10 +16,10 @@
     "url": "https://github.com/rwwagner90"
   },
   "dependencies": {
-    "shepherd.js": "^3.1.0"
+    "shepherd.js": "^4.3.3"
   },
   "peerDependencies": {
-    "@angular/common": "^8.1.0",
-    "@angular/core": "^8.1.0"
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
   }
 }

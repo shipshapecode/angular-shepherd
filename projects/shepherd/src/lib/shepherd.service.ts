@@ -146,6 +146,7 @@ export class ShepherdService {
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,
       defaultStepOptions: this.defaultStepOptions,
+      disableScroll: this.disableScroll,
       tourName: this.tourName,
       useModalOverlay: this.modal
     });

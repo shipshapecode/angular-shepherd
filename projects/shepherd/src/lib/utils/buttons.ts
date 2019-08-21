@@ -14,7 +14,7 @@ export function makeButton(button) {
     return button;
   }
 
-  if (!builtInButtonTypes.includes(type)) {
+  if (builtInButtonTypes.indexOf(type) === -1) {
     throw new Error(`'type' property must be one of 'back', 'cancel', or 'next'`);
   }
 

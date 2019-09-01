@@ -92,7 +92,9 @@ It will be an object of a form something like:
 this.shepherdService.defaultStepOptions = {
   classes: 'custom-class-name-1 custom-class-name-2',
   scrollTo: false,
-  showCancelLink: true
+  cancelIcon: {
+    enabled: true
+  }
 };
 ```
 
@@ -176,10 +178,12 @@ this.shepherdService.addSteps([
           type: 'next'
         }
       ],
+      cancelIcon: {
+        enabled: true
+      },
       classes: 'custom-class-name-1 custom-class-name-2',
       highlightClass: 'highlight',
       scrollTo: false,
-      showCancelLink: true,
       title: 'Welcome to Angular-Shepherd!',
       text: ['Angular-Shepherd is a JavaScript library for guiding users through your Angular app.'],
       when: {
@@ -196,144 +200,6 @@ this.shepherdService.addSteps([
 ]);
 ```
 
-A lot of the options are the same as Shepherd options, but I will go through each of them for reference.
+## Step Options
 
-##### attachTo
-
-The selector and position for the tour popup to attach to, of the format 'selector position'. 
-Position options are: top, bottom, left, and right. Can also be an object formatted like
-
-```js
-{
-  element: '.myElement',
-  on: 'top'
-}
-```
-
-Where `.myElement` is any valid jQuery selector.
-
-> **default value:** `''`
-
-
-##### beforeShowPromise
-
-A function that returns a promise. When the promise resolves, the rest of the `show` code for the step will execute. 
-
-> **default value:** `null`
-
-
-##### buttons
-
-There are some standard button types supported by angular-shepherd. Just set `type` to `'next'`, `'back'`, or `'cancel'`, 
-then set the `text` and `classes` as normal. These will automatically be bound to the Shepherd functions. If 
-no type is passed, a normal Shepherd button will be created.
-
-##### classes
-
-Extra classes to apply to the step, for styling purposes and such.
-
-> **default value:** `''`
-
-
-#### canClickTarget
-
-Whether or not the target element being attached to should be "clickable". If set to `false`, Angular Shepherd 
-sets the element's [`pointerEvents` style](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) to 
-`none` while the step is active.
-
-> **default value:** `true`
-
-
-##### highlightClass
-
-This is an extra class to apply to the attachTo element when it is highlighted (that is, when its step is active). 
-It can be any string. Just style that class name in your CSS.
-
-> **default value:** ``
-
-#### id
-
-The name to give this step of the tour
-
-##### scrollTo
-
-This sets whether or not the screen should be scrolled to get to the element when the step becomes active.
-
-> **default value:** `false`
-
-
-##### scrollToHandler
-
-For custom scrolling actions, pass a function to this option. For example:
-
-```js
-
-  let scrollHandler = (el) => {
-    let winHeight = $(window).height();
-    // Target vertical middle scroll position
-    let targetPos = ($(el).offset().top + $(el).position().top) - (winHeight / 2);
-    // Animate scrolling with Velocity.js, for example.
-    $('#main-scroll-container').velocity({ top: targetPos }, 1000, "swing");
-  };
-
-  let steps = [
-    {id: 'intro',
-     options: {
-        attachTo: '#first-item left',
-        title: 'Welcome!',
-        text: ["Have we met before?"],
-        scrollTo: true,
-        scrollToHandler: scrollHandler
-      }
-    }
-  ];
-```
-
-> **default value:** `null`
-
-
-##### showCancelLink
-
-When true, an x will appear in the top right of the popup, for canceling the tour.
-
-> **default value:** `false`
-
-
-##### title
-
-The step's title. It becomes an h3 at the top of the step.
-
-> **default value:** `''`
-
-
-##### tippyOptions
-
-Extra options to pass to [Tippy](https://atomiks.github.io/tippyjs/#all-options).
-
-> **default value:** `null`
-
-
-##### text
-
-The text content to display in the tour popup. Can be:
-+ a string
-+ an HTML element
-+ a function returning any of the above
-
-> **default value:** `null`
-
-
-##### when
-
-An object containing functions to be executed when events occur on the step.  
-Supported events are `before-show`, `show`, `before-hide`, `hide`, `complete`, `cancel`, and `destroy`.
-
-```js
-  when: {
-    show: function() {
-      window.scrollTo(0, 0);
-    }
-  }
-```
-
-> **default value:** `null`
+See the [Step docs](https://shepherdjs.dev/docs/Step.html) for all available Step options.

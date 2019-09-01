@@ -12,6 +12,7 @@ export const builtInButtons = {
   },
   back: {
     classes: 'back-button',
+    secondary: true,
     text: 'Back',
     type: 'back'
   }
@@ -20,7 +21,9 @@ export const builtInButtons = {
 export const defaultStepOptions = {
   classes: 'shepherd-theme-arrows custom-default-class',
   scrollTo: true,
-  showCancelLink: true,
+  cancelIcon: {
+    enabled: true
+  },
 
   tippyOptions: {
     duration: 500

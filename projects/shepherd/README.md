@@ -31,6 +31,15 @@ npm install angular-shepherd --save
 **NOTE: This may not be the proper Angular way to do everything, as I am not
 an Angular dev, so please let me know if you have suggestions!**
 
+Shepherd ships a single style file, which you will need to include. You can do so by adding it
+to your angular.json.
+
+```json
+  "styles": [
+     "node_modules/shepherd.js/dist/css/shepherd.css"
+  ],
+```
+
 Then, you will need to inject the `ShepherdService` to be able to interact with Shepherd and 
 call `addSteps` to add your steps, `start` to start the tour, etc.
 
@@ -55,7 +64,6 @@ export class ShepherdComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.shepherdService.defaultStepOptions = defaultStepOptions;
-    this.shepherdService.disableScroll = true;
     this.shepherdService.modal = true;
     this.shepherdService.confirmCancel = false;
     this.shepherdService.addSteps(defaultSteps);
@@ -127,14 +135,6 @@ this.shepherdService.requiredElements = [
 ```
 
 > **default value:** `[]`
-
-
-### disableScroll
-
-`disableScroll` is a boolean, that when set to true, will keep the user from scrolling with the scrollbar,
-mousewheel, arrow keys, etc. You may want to use this to ensure you are driving the scroll position with the tour.
-
-> **default value:** `false`
 
 ### modal
 

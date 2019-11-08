@@ -13,7 +13,6 @@ export class ShepherdComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.shepherdService.defaultStepOptions = defaultStepOptions;
-    this.shepherdService.disableScroll = true;
     this.shepherdService.modal = true;
     this.shepherdService.confirmCancel = false;
     this.shepherdService.addSteps(defaultSteps);

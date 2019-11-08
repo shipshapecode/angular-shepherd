@@ -124,29 +124,6 @@ export const steps = [
           in the buttons array in each step.`
   },
   {
-    attachTo: {
-      element: '.disable-scroll-element',
-      on: 'top'
-    },
-    buttons: [
-      builtInButtons.cancel,
-      builtInButtons.back,
-      builtInButtons.next
-    ],
-    classes: 'custom-class-name-1 custom-class-name-2',
-    id: 'disableScroll',
-    text: `
-      <p>
-        When navigating the user through a tour, you may want to disable scrolling, so they
-        cannot mess up your carefully planned out, amazing tour. This is now easily achieved
-        with this.get('tour').set('disableScroll', true).
-      </p>
-      
-      <p>
-        Try scrolling right now, then exit the tour and see that you can again!
-      </p>`
-  },
-  {
     buttons: [
       builtInButtons.cancel,
       builtInButtons.back

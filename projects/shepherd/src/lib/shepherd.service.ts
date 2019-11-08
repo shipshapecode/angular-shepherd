@@ -10,7 +10,6 @@ export class ShepherdService {
   confirmCancel = false;
   confirmCancelMessage: string = null;
   defaultStepOptions: object = {};
-  disableScroll = false;
   errorTitle = null;
   isActive = false;
   messageForUser: string = null;
@@ -146,7 +145,6 @@ export class ShepherdService {
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,
       defaultStepOptions: this.defaultStepOptions,
-      disableScroll: this.disableScroll,
       tourName: this.tourName,
       useModalOverlay: this.modal
     });

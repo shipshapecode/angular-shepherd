@@ -168,5 +168,8 @@
       }
     }
   },
-  "defaultProject": "shepherd"
+  "defaultProject": "shepherd",
+  "cli": {
+    "analytics": "02495330-e062-4d0b-8606-581c26727064"
+  }
 }

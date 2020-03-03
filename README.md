@@ -203,13 +203,14 @@ this.shepherdService.addSteps([
 
 ## Buttons
 
-In Shepherd, you can have as many buttons as you want inside a step. You can build an object with some premade buttons, making it easier to manipulate and insert in new steps. Buttons by default accept three different types: back, cancel, next.
+In Shepherd, you can have as many buttons as you want inside a step. You can build an object with some premade buttons, making it easier to manipulate and insert in new steps. Buttons by default accept three different types: back, cancel, next. In this simple example, we have three buttons: each one with different types and classes. 
 
 ```js
 const builtInButtons = {
   cancel: {
     classes: "cancel-button",
-    text: "cancel",
+    text: "Cancel",
+    type: "cancel"
   },
   next: {
     classes: "next-button",
@@ -225,45 +226,23 @@ const builtInButtons = {
 };
 ```
 
-In this simple example, we have three buttons: each one with different types and classes. 
-
-**⚠️ You can't set up a type and an action at the same time inside a button**. 
-
-There are some techniques to make certain buttons perform the actions you want on the component. In Angular, you can use Decorators to make some actions work by events. For example, you can listen for document clicks (mouse events) and check what the user is doing.
-
-First, you need to import HostListener from @angular/core. 
+Buttons can have an action inside then. An action expects a function, and you can set whatever you need inside this. Whenever the button is clicked, the function will be executed. You can use it for default shepherd functions, like `this.shepherdService.complete()` or `this.shepherdService.next()`.It's possible to create your own function and set it inside an action. 
 
 ```js
-import { HostListener } from '@angular/core';
-```
-
-Now, inside your component, it's possible to use HostListener decorator inside your component, as simple as the code below.
-
-```js
-@HostListener('document:click', ['$event.target'])
-onActionHandler() {
-    console.log(event);
-}
-```
-
-With this decorator and function, `onActionHandler` will run every time and `document:click` event occurs. A quick way to watch for specific tutorial buttons clicks is declaring a class for that button. The default button class declaration for shepherd buttons is: "*type-class custom-class shepherd-button*". 
-
-For example, a button with type next and a custom class will be: "*next-button custom-class shepherd button*". So if you use some event handler and check `classList` array, the second element will be your custom class. Let's see how we can achieve this:
-
-```js
-  doSomething() {
-    console.log('Custom class button clicked!');
+const builtInButtons = {
+  complete: {
+    classes: "complete-button",
+    text: "Finish Tutorial",
+    action: function() {
+      return console.log('button clicked');
+    }
   }
-
-  @HostListener('document:click', ['$event.target'])
-  onActionHandler() {
-    var element = event.target as HTMLButtonElement;
-    if (event.type == 'click' && element.classList[1] == 'custom-class-button') {
-      this.doSomething();
-    } 
-  }
+};
 ```
-With this, whenever a button with *custom-class-button* is clicked, `doSomething` is called, printing “Custom class button clicked!”.
+
+**⚠️ You can't set up a type and an action at the same time inside a button**.
+
+To learn more about button properties, look at the [documentation](https://shepherdjs.dev/docs/Step.html "documentation").
 
 ## Step Options
 

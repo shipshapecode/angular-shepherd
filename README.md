@@ -201,6 +201,49 @@ this.shepherdService.addSteps([
 ]);
 ```
 
+## Buttons
+
+In Shepherd, you can have as many buttons as you want inside a step. You can build an object with some premade buttons, making it easier to manipulate and insert in new steps. Buttons by default accept three different types: back, cancel, next. In this simple example, we have three buttons: each one with different types and classes. 
+
+```js
+const builtInButtons = {
+  cancel: {
+    classes: "cancel-button",
+    text: "Cancel",
+    type: "cancel"
+  },
+  next: {
+    classes: "next-button",
+    text: "Next",
+    type: "next"
+  },
+  back: {
+    classes: "back-button",
+    secondary: true,
+    text: "Back",
+    type: "back"
+  }
+};
+```
+
+Buttons have an action property, which must be a function. Whenever the button is clicked, the function will be executed. You can use it for default shepherd functions, like `this.shepherdService.complete()` or `this.shepherdService.next()`, or create your own function to use for the action.
+
+```js
+const builtInButtons = {
+  complete: {
+    classes: "complete-button",
+    text: "Finish Tutorial",
+    action: function() {
+      return console.log('button clicked');
+    }
+  }
+};
+```
+
+**⚠️ You can't set up a type and an action at the same time inside a button**.
+
+To learn more about button properties, look at the [documentation](https://shepherdjs.dev/docs/Step.html "documentation").
+
 ## Step Options
 
 See the [Step docs](https://shepherdjs.dev/docs/Step.html) for all available Step options.

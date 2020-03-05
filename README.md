@@ -226,7 +226,7 @@ const builtInButtons = {
 };
 ```
 
-Buttons can have an action inside then. An action expects a function, and you can set whatever you need inside this. Whenever the button is clicked, the function will be executed. You can use it for default shepherd functions, like `this.shepherdService.complete()` or `this.shepherdService.next()`.It's possible to create your own function and set it inside an action. 
+Buttons have an action property, which must be a function. Whenever the button is clicked, the function will be executed. You can use it for default shepherd functions, like `this.shepherdService.complete()` or `this.shepherdService.next()`, or create your own function to use for the action.
 
 ```js
 const builtInButtons = {

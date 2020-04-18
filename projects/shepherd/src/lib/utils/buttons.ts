@@ -7,7 +7,7 @@
  * @param button.action The action to call
  */
 export function makeButton(button) {
-  const { classes, secondary, type, text } = button;
+  const { classes, disabled, label, secondary, type, text } = button;
   const builtInButtonTypes = ['back', 'cancel', 'next'];
 
   if (!type) {
@@ -21,6 +21,8 @@ export function makeButton(button) {
   return {
     action: this[type].bind(this),
     classes,
+    disabled,
+    label,
     secondary,
     text
   };

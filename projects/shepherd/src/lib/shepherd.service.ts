@@ -42,6 +42,13 @@ export class ShepherdService {
   complete() {
     this.tourObject.complete();
   }
+  
+  /**
+   * Gets the current step
+   */
+  getCurrentStep() {
+    return this.tourObject.getCurrentStep();
+  }
 
   /**
    * Hides the current step

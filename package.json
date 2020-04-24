@@ -23,7 +23,7 @@
     "core-js": "^3.6.5",
     "rxjs": "^6.5.5",
     "shepherd.js": "^7.1.4",
-    "tslib": "^1.11.0",
+    "tslib": "^1.11.1",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {

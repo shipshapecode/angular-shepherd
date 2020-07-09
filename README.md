@@ -8,9 +8,6 @@
 ![Download count all time](https://img.shields.io/npm/dt/angular-shepherd.svg)
 [![npm](https://img.shields.io/npm/dm/angular-shepherd.svg)]()
 [![Build Status](https://travis-ci.org/shipshapecode/angular-shepherd.svg)](https://travis-ci.org/shipshapecode/angular-shepherd)
-[![Code Climate](https://codeclimate.com/github/shipshapecode/angular-shepherd/badges/gpa.svg)](https://codeclimate.com/github/shipshapecode/angular-shepherd)
-[![Test Coverage](https://codeclimate.com/github/shipshapecode/angular-shepherd/badges/coverage.svg)](https://codeclimate.com/github/shipshapecode/angular-shepherd/coverage)
-[![Greenkeeper badge](https://badges.greenkeeper.io/shipshapecode/angular-shepherd.svg)](https://greenkeeper.io/)
 
 This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library. 
 It provides additional functionality, on top of Shepherd, as well.

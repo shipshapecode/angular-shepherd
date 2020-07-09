@@ -17,6 +17,10 @@ It provides additional functionality, on top of Shepherd, as well.
 
 ## Compatibility
 
+* Angular 8: 0.5.0
+* Angular 9: 0.6.0
+* Angular 10: 0.7.0
+
 This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions
 of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!
 
@@ -151,54 +155,98 @@ You must pass an array of steps to `addSteps`, something like this:
 this.shepherdService.addSteps([
   {
     id: 'intro',
-    options: {
-      attachTo: '.first-element bottom',
-      beforeShowPromise: function() {
-        return new Promise(function(resolve) {
-          setTimeout(function() {
-            window.scrollTo(0, 0);
-            resolve();
-          }, 500);
-        });
+    attachTo: { 
+      element: '.first-element', 
+      on: 'bottom'
+    },
+    beforeShowPromise: function() {
+      return new Promise(function(resolve) {
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+          resolve();
+        }, 500);
+      });
+    },
+    buttons: [
+      {
+        classes: 'shepherd-button-secondary',
+        text: 'Exit',
+        type: 'cancel'
       },
-      buttons: [
-        {
-          classes: 'shepherd-button-secondary',
-          text: 'Exit',
-          type: 'cancel'
-        },
-        {
-          classes: 'shepherd-button-primary',
-          text: 'Back',
-          type: 'back'
-        },
-        {
-          classes: 'shepherd-button-primary',
-          text: 'Next',
-          type: 'next'
-        }
-      ],
-      cancelIcon: {
-        enabled: true
+      {
+        classes: 'shepherd-button-primary',
+        text: 'Back',
+        type: 'back'
       },
-      classes: 'custom-class-name-1 custom-class-name-2',
-      highlightClass: 'highlight',
-      scrollTo: false,
-      title: 'Welcome to Angular-Shepherd!',
-      text: ['Angular-Shepherd is a JavaScript library for guiding users through your Angular app.'],
-      when: {
-        show: () => {
-          console.log('show step');
-        },
-        hide: () => {
-          console.log('hide step');
-        }
+      {
+        classes: 'shepherd-button-primary',
+        text: 'Next',
+        type: 'next'
+      }
+    ],
+    cancelIcon: {
+      enabled: true
+    },
+    classes: 'custom-class-name-1 custom-class-name-2',
+    highlightClass: 'highlight',
+    scrollTo: false,
+    title: 'Welcome to Angular-Shepherd!',
+    text: ['Angular-Shepherd is a JavaScript library for guiding users through your Angular app.'],
+    when: {
+      show: () => {
+        console.log('show step');
+      },
+      hide: () => {
+        console.log('hide step');
       }
     }
   },
   ...
 ]);
 ```
+
+## Buttons
+
+In Shepherd, you can have as many buttons as you want inside a step. You can build an object with some premade buttons, making it easier to manipulate and insert in new steps. Buttons by default accept three different types: back, cancel, next. In this simple example, we have three buttons: each one with different types and classes. 
+
+```js
+const builtInButtons = {
+  cancel: {
+    classes: "cancel-button",
+    text: "Cancel",
+    type: "cancel"
+  },
+  next: {
+    classes: "next-button",
+    text: "Next",
+    type: "next"
+  },
+  back: {
+    classes: "back-button",
+    secondary: true,
+    text: "Back",
+    type: "back"
+  }
+};
+```
+
+Buttons have an action property, which must be a function. Whenever the button is clicked, the function will be executed. You can use it for default shepherd functions, like `this.shepherdService.complete()` or `this.shepherdService.next()`, or create your own function to use for the action.
+
+```js
+const builtInButtons = {
+  complete: {
+    classes: "complete-button",
+    text: "Finish Tutorial",
+    action: function() {
+      return console.log('button clicked');
+    }
+  }
+};
+```
+
+**⚠️ You can't set up a type and an action at the same time inside a button**.
+
+To learn more about button properties, look at the [documentation](https://shepherdjs.dev/docs/Step.html "documentation").
 
 ## Step Options
 

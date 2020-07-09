@@ -61,8 +61,7 @@
               "node_modules/shepherd.js/dist/css/shepherd.css",
               "projects/shepherd-tester/src/styles.css"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {

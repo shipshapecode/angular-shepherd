@@ -202,6 +202,14 @@ this.shepherdService.addSteps([
 ]);
 ```
 
+### removeStep
+
+To remove steps from a specific tour you pass the stepId from said step to remove it.
+
+``` js
+this.shepherdService.removeStep("stepId");
+```
+
 ## Buttons
 
 In Shepherd, you can have as many buttons as you want inside a step. You can build an object with some premade buttons, making it easier to manipulate and insert in new steps. Buttons by default accept three different types: back, cancel, next. In this simple example, we have three buttons: each one with different types and classes. 

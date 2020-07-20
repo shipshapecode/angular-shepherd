@@ -82,6 +82,14 @@ export class ShepherdService {
   }
 
   /**
+   * This function is called to remove steps from the tour.
+   * @param name is the name of the step you are looking to remove
+   */ 
+  removeStep(name: string) {
+    this.tourObject.removeStep(name);
+  }
+
+  /**
    * Take a set of steps and create a tour object based on the current configuration
    * @param steps An array of steps
    */

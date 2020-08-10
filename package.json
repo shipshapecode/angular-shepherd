@@ -23,7 +23,7 @@
     "core-js": "^3.6.5",
     "rxjs": "^6.6.2",
     "shepherd.js": "^8.0.2",
-    "tslib": "^2.0.0",
+    "tslib": "^2.0.1",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.10.2",
     "tsickle": "^0.39.1",
-    "tslib": "^2.0.0",
+    "tslib": "^2.0.1",
     "tslint": "^6.1.2",
     "typescript": ">=3.9.2 and <4.0.0"
   }

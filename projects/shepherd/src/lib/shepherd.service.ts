@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import Shepherd from 'shepherd.js';
-import {elementIsHidden} from './utils/dom';
-import {makeButton} from './utils/buttons';
+import { elementIsHidden } from './utils/dom';
+import { makeButton } from './utils/buttons';
 
 @Injectable({
   providedIn: 'root'

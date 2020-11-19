@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import Shepherd from 'shepherd.js';
-import { elementIsHidden } from './utils/dom';
-import { makeButton } from './utils/buttons';
+import {elementIsHidden} from './utils/dom';
+import {makeButton} from './utils/buttons';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,7 @@ export class ShepherdService {
   messageForUser: string = null;
   modal = false;
   requiredElements = [];
+  showErrorWhenRequiredElementsNotPresent = false;
   steps = [];
   tourName = undefined;
   tourObject: Shepherd.Tour = null;
@@ -95,15 +96,17 @@ export class ShepherdService {
     }
 
     if (!this.requiredElementsPresent()) {
-      tour.addStep({
-        buttons: [{
-          text: 'Exit',
-          action: tour.cancel
-        }],
-        id: 'error',
-        title: this.errorTitle,
-        text: [this.messageForUser]
-      });
+      if (this.showErrorWhenRequiredElementsNotPresent) {
+        tour.addStep({
+          buttons: [{
+            text: 'Exit',
+            action: tour.cancel
+          }],
+          id: 'error',
+          title: this.errorTitle,
+          text: [this.messageForUser]
+        });
+      }
       return;
     }
 
@@ -120,7 +123,7 @@ export class ShepherdService {
    * Observes the array of requiredElements, which are the elements that must be present at the start of the tour,
    * and determines if they exist, and are visible, if either is false, it will stop the tour from executing.
    */
-  private requiredElementsPresent() {
+  requiredElementsPresent() {
     let allElementsPresent = true;
 
     /* istanbul ignore next: also can't test this due to things attached to root blowing up tests */

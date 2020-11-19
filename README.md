@@ -137,6 +137,12 @@ this.shepherdService.requiredElements = [
 
 > **default value:** `[]`
 
+### showErrorWhenRequiredElementsNotPresent
+
+`showErrorWhenRequiredElementsNotPresent` is a boolean, that should be set to true, if you would like to add a step with error message when required elements are not present.
+
+> **default value:** `false`
+
 ### modal
 
 `modal` is a boolean, that should be set to true, if you would like the rest of the screen, other than the current element, 

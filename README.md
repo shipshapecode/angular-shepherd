@@ -47,6 +47,9 @@ call `addSteps` to add your steps, `start` to start the tour, etc.
 You could either do this at the application level, in your application component
 or on a per component or per route/view basis.
 
+*NOTE* It is highly recommended to inject ShepherdService into your `app.component.ts`. Injecting it
+at the app level ensures you only create one instance of Shepherd.
+
 In that component you will want to use `AfterViewInit` to `addSteps` to the Shepherd service.
 
 ```typescript

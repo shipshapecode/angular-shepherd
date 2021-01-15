@@ -7,7 +7,7 @@
 [![npm version](https://badge.fury.io/js/angular-shepherd.svg)](http://badge.fury.io/js/angular-shepherd)
 ![Download count all time](https://img.shields.io/npm/dt/angular-shepherd.svg)
 [![npm](https://img.shields.io/npm/dm/angular-shepherd.svg)]()
-[![Build Status](https://travis-ci.org/shipshapecode/angular-shepherd.svg)](https://travis-ci.org/shipshapecode/angular-shepherd)
+![CI Build](https://github.com/shipshapecode/angular-shepherd/workflows/CI%20Build/badge.svg)
 
 This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library. 
 It provides additional functionality, on top of Shepherd, as well.
@@ -17,6 +17,7 @@ It provides additional functionality, on top of Shepherd, as well.
 * Angular 8: 0.5.0
 * Angular 9: 0.6.0
 * Angular 10: 0.7.0
+* Angular 11: 11.x
 
 This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions
 of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!

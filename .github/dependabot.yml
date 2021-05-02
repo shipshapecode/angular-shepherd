@@ -8,10 +8,3 @@ updates:
   open-pull-requests-limit: 10
   labels:
   - dependencies
-  ignore:
-  - dependency-name: "@types/node"
-    versions:
-    - 15.0.0
-  - dependency-name: core-js
-    versions:
-    - 3.10.2

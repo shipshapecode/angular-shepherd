@@ -20,7 +20,7 @@
     "@angular/core": "^11.0.9",
     "@angular/platform-browser": "^11.0.9",
     "@angular/platform-browser-dynamic": "^11.0.9",
-    "core-js": "^3.14.0",
+    "core-js": "^3.15.0",
     "rxjs": "^6.6.7",
     "shepherd.js": "^8.3.1",
     "tslib": "^2.3.0",

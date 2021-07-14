@@ -19,7 +19,7 @@
     "shepherd.js": "^8.0.1"
   },
   "peerDependencies": {
-    "@angular/common": "^11.0.0",
-    "@angular/core": "^11.0.0"
+    "@angular/common": "^12.1.1",
+    "@angular/core": "^12.1.1"
   }
 }

@@ -20,3 +20,10 @@ jobs:
           node-version: 14.x
       - run: npm install
       - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+  automerge:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v2.2.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}    

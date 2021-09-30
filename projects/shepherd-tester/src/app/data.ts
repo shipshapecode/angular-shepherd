@@ -1,4 +1,4 @@
-import Step from "shepherd.js/src/types/step";
+import Step from 'shepherd.js/src/types/step';
 
 export const builtInButtons = {
   cancel: {

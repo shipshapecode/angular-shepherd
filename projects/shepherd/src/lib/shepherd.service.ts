@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import Shepherd from 'shepherd.js';
 import { elementIsHidden } from './utils/dom';
 import { makeButton } from './utils/buttons';
-
+import Step from 'shepherd.js/src/types/step';
 @Injectable({
   providedIn: 'root'
 })
 export class ShepherdService {
   confirmCancel = false;
   confirmCancelMessage: string = null;
-  defaultStepOptions: object = {};
+  defaultStepOptions: Step.StepOptions = {};
   errorTitle = null;
   isActive = false;
   messageForUser: string = null;
@@ -19,7 +19,7 @@ export class ShepherdService {
   tourName = undefined;
   tourObject: Shepherd.Tour = null;
 
-  constructor() {
+  constructor () {
   }
 
   /**
@@ -61,7 +61,7 @@ export class ShepherdService {
    * Show a specific step, by passing its id
    * @param id The id of the step you want to show
    */
-  show(id) {
+  show(id: string | number) {
     this.tourObject.show(id);
   }
 
@@ -85,7 +85,7 @@ export class ShepherdService {
    * Take a set of steps and create a tour object based on the current configuration
    * @param steps An array of steps
    */
-  addSteps(steps: Array<any>) {
+  addSteps(steps: Array<Step.StepOptions>) {
     this._initialize();
     const tour = this.tourObject;
 

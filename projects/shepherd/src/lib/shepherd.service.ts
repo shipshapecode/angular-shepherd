@@ -15,7 +15,6 @@ export class ShepherdService {
   messageForUser: string = null;
   modal = false;
   requiredElements = [];
-  steps = [];
   tourName = undefined;
   tourObject: Shepherd.Tour = null;
 

@@ -48,14 +48,14 @@ describe('ShepherdService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('starts the tour when the `start` event is triggered', () => {
-    const service: ShepherdService = TestBed.get(ShepherdService);
+    const service: ShepherdService = TestBed.inject(ShepherdService);
     const mockTourObject = {
       start() {
         expect(true).toBeTruthy('The tour was started');
       }
     }
 
-    service.steps = steps;
+    service.addSteps(steps);
 
     // @ts-ignore: Tests do not need all methods
     service.tourObject = mockTourObject;
@@ -64,14 +64,14 @@ describe('ShepherdService', () => {
   });
 
   it('passes through a custom scrollToHandler option', () => {
-    const service: ShepherdService = TestBed.get(ShepherdService);
+    const service: ShepherdService = TestBed.inject(ShepherdService);
     const mockTourObject = {
       start() {
         expect(steps[0].options.scrollToHandler()).toBe('custom scrollToHandler', 'The handler was passed through as an option on the step');
       }
     };
 
-    service.steps = steps;
+    service.addSteps(steps);
 
     // @ts-ignore: Tests do not need all methods
     service.tourObject = mockTourObject;

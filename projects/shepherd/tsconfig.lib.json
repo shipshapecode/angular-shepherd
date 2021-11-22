@@ -19,7 +19,7 @@
   },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
-    "enableIvy": false,
+    "compilationMode": "partial",
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "fullTemplateTypeCheck": true,

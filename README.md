@@ -9,17 +9,17 @@
 [![npm](https://img.shields.io/npm/dm/angular-shepherd.svg)]()
 ![CI Build](https://github.com/shipshapecode/angular-shepherd/workflows/CI%20Build/badge.svg)
 
-This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library. 
+This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library.
 It provides additional functionality, on top of Shepherd, as well.
 
 ## Compatibility
 
-* Angular 8: 0.5.0
-* Angular 9: 0.6.0
-* Angular 10: 0.7.0
-* Angular 11: 11.x
-* Angular 12: 12.x
-* Angular 13: 13.x
+- Angular 8: 0.5.0
+- Angular 9: 0.6.0
+- Angular 10: 0.7.0
+- Angular 11: 11.x
+- Angular 12: 12.x
+- Angular 13: 13.x
 
 This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions
 of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!
@@ -44,7 +44,7 @@ to your angular.json.
   ],
 ```
 
-Then, you will need to inject the `ShepherdService` to be able to interact with Shepherd and 
+Then, you will need to inject the `ShepherdService` to be able to interact with Shepherd and
 call `addSteps` to add your steps, `start` to start the tour, etc.
 
 You could either do this at the application level, in your application component
@@ -56,18 +56,17 @@ at the app level ensures you only create one instance of Shepherd.**
 In that component you will want to use `AfterViewInit` to `addSteps` to the Shepherd service.
 
 ```typescript
-import { Component, AfterViewInit } from '@angular/core';
-import { ShepherdService } from 'angular-shepherd';
-import { steps as defaultSteps, defaultStepOptions} from '../data';
+import { Component, AfterViewInit } from "@angular/core";
+import { ShepherdService } from "angular-shepherd";
+import { steps as defaultSteps, defaultStepOptions } from "../data";
 
 @Component({
-  selector: 'shepherd',
-  templateUrl: './shepherd.component.html',
-  styleUrls: ['./shepherd.component.css']
+  selector: "shepherd",
+  templateUrl: "./shepherd.component.html",
+  styleUrls: ["./shepherd.component.css"],
 })
 export class ShepherdComponent implements AfterViewInit {
-
-  constructor(private shepherdService: ShepherdService) { }
+  constructor(private shepherdService: ShepherdService) {}
 
   ngAfterViewInit() {
     this.shepherdService.defaultStepOptions = defaultStepOptions;
@@ -81,7 +80,7 @@ export class ShepherdComponent implements AfterViewInit {
 
 ## Configuration
 
-The following configuration options can be set on the ShepherdService to control the way that Shepherd is used. 
+The following configuration options can be set on the ShepherdService to control the way that Shepherd is used.
 **The only required option is `steps`, which is set via `addSteps`.**
 
 ### confirmCancel
@@ -99,22 +98,21 @@ is set to true.
 `defaultStepOptions` is used to set the options that will be applied to each step by default.
 You can pass in any of the options that you can with Shepherd.
 
-**⚠️ You must set `defaultStepOptions` *BEFORE* calling `addSteps` to set the steps.**
+**⚠️ You must set `defaultStepOptions` _BEFORE_ calling `addSteps` to set the steps.**
 
 It will be an object of a form something like:
 
 ```js
 this.shepherdService.defaultStepOptions = {
-  classes: 'custom-class-name-1 custom-class-name-2',
+  classes: "custom-class-name-1 custom-class-name-2",
   scrollTo: false,
   cancelIcon: {
-    enabled: true
-  }
+    enabled: true,
+  },
 };
 ```
 
 > **default value:** `{}`
-
 
 ### requiredElements
 
@@ -123,20 +121,22 @@ exist and be visible for the tour to start. If any elements are not present, it 
 
 You can also specify a message, which will tell the user what they need to do to make the tour work.
 
-**⚠️ You must set `requiredElements` *BEFORE* calling `addSteps` to set the steps.**
+**⚠️ You must set `requiredElements` _BEFORE_ calling `addSteps` to set the steps.**
 
 _Example_
+
 ```js
 this.shepherdService.requiredElements = [
   {
-    selector: '.search-result-element',
-    message: 'No search results found. Please execute another search, and try to start the tour again.',
-    title: 'No results'
+    selector: ".search-result-element",
+    message:
+      "No search results found. Please execute another search, and try to start the tour again.",
+    title: "No results",
   },
   {
-    selector: '.username-element',
-    message: 'User not logged in, please log in to start this tour.',
-    title: 'Please login'
+    selector: ".username-element",
+    message: "User not logged in, please log in to start this tour.",
+    title: "Please login",
   },
 ];
 ```
@@ -145,7 +145,7 @@ this.shepherdService.requiredElements = [
 
 ### modal
 
-`modal` is a boolean, that should be set to true, if you would like the rest of the screen, other than the current element, 
+`modal` is a boolean, that should be set to true, if you would like the rest of the screen, other than the current element,
 greyed out, and the current element highlighted. If you do not need modal functionality, you can remove this option or set it to false.
 
 > **default value:** `false`
@@ -158,8 +158,8 @@ You must pass an array of steps to `addSteps`, something like this:
 this.shepherdService.addSteps([
   {
     id: 'intro',
-    attachTo: { 
-      element: '.first-element', 
+    attachTo: {
+      element: '.first-element',
       on: 'bottom'
     },
     beforeShowPromise: function() {
@@ -174,17 +174,17 @@ this.shepherdService.addSteps([
       {
         classes: 'shepherd-button-secondary',
         text: 'Exit',
-        type: 'cancel'
+        action: this.shepherdService.cancel
       },
       {
         classes: 'shepherd-button-primary',
         text: 'Back',
-        type: 'back'
+        action: this.shepherdService.back
       },
       {
         classes: 'shepherd-button-primary',
         text: 'Next',
-        type: 'next'
+        action: this.shepherdService.next
       }
     ],
     cancelIcon: {
@@ -210,26 +210,26 @@ this.shepherdService.addSteps([
 
 ## Buttons
 
-In Shepherd, you can have as many buttons as you want inside a step. You can build an object with some premade buttons, making it easier to manipulate and insert in new steps. Buttons by default accept three different types: back, cancel, next. In this simple example, we have three buttons: each one with different types and classes. 
+In Shepherd, you can have as many buttons as you want inside a step. You can build an object with some premade buttons, making it easier to manipulate and insert in new steps. Buttons by default accept three different types: back, cancel, next. In this simple example, we have three buttons: each one with different types and classes.
 
 ```js
 const builtInButtons = {
   cancel: {
     classes: "cancel-button",
     text: "Cancel",
-    type: "cancel"
+    type: "cancel",
   },
   next: {
     classes: "next-button",
     text: "Next",
-    type: "next"
+    type: "next",
   },
   back: {
     classes: "back-button",
     secondary: true,
     text: "Back",
-    type: "back"
-  }
+    type: "back",
+  },
 };
 ```
 
@@ -240,10 +240,10 @@ const builtInButtons = {
   complete: {
     classes: "complete-button",
     text: "Finish Tutorial",
-    action: function() {
-      return console.log('button clicked');
-    }
-  }
+    action: function () {
+      return console.log("button clicked");
+    },
+  },
 };
 ```
 

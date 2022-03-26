@@ -217,18 +217,18 @@ const builtInButtons = {
   cancel: {
     classes: "cancel-button",
     text: "Cancel",
-    type: "cancel",
+    action: this.shepherdService.cancel,
   },
   next: {
     classes: "next-button",
     text: "Next",
-    type: "next",
+    action: this.shepherdService.next,
   },
   back: {
     classes: "back-button",
     secondary: true,
     text: "Back",
-    type: "back",
+    action: this.shepherdService.back,
   },
 };
 ```

@@ -32,7 +32,7 @@
     "@angular/compiler-cli": "^13.3.2",
     "@angular/language-service": "^13.3.3",
     "@angular/router": "^13.3.2",
-    "@types/jasmine": "^4.0.2",
+    "@types/jasmine": "^4.0.3",
     "@types/jasminewd2": "^2.0.10",
     "@types/node": "^17.0.24",
     "codelyzer": "^6.0.2",

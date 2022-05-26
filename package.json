@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^13.3.9",
     "core-js": "^3.22.7",
     "rxjs": "^7.5.5",
-    "shepherd.js": "^9.1.0",
+    "shepherd.js": "^9.1.1",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.5"
   },

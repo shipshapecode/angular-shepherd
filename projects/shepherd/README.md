@@ -7,7 +7,7 @@
 [![npm version](https://badge.fury.io/js/angular-shepherd.svg)](http://badge.fury.io/js/angular-shepherd)
 ![Download count all time](https://img.shields.io/npm/dt/angular-shepherd.svg)
 [![npm](https://img.shields.io/npm/dm/angular-shepherd.svg)]()
-[![Build Status](https://travis-ci.org/shipshapecode/angular-shepherd.svg)](https://travis-ci.org/shipshapecode/angular-shepherd)
+![CI Build](https://github.com/shipshapecode/angular-shepherd/workflows/CI%20Build/badge.svg)
 
 This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/shepherd), site tour, library. 
 It provides additional functionality, on top of Shepherd, as well.
@@ -17,6 +17,10 @@ It provides additional functionality, on top of Shepherd, as well.
 * Angular 8: 0.5.0
 * Angular 9: 0.6.0
 * Angular 10: 0.7.0
+* Angular 11: 11.x
+* Angular 12: 12.x
+* Angular 13: 13.x
+* Angular 14: 14.x
 
 This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions
 of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!
@@ -46,6 +50,9 @@ call `addSteps` to add your steps, `start` to start the tour, etc.
 
 You could either do this at the application level, in your application component
 or on a per component or per route/view basis.
+
+**NOTE: It is highly recommended to inject ShepherdService into your `app.component.ts`. Injecting it
+at the app level ensures you only create one instance of Shepherd.**
 
 In that component you will want to use `AfterViewInit` to `addSteps` to the Shepherd service.
 

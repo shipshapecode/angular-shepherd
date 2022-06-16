@@ -31,7 +31,7 @@
     "@angular/cli": "^14.0.0",
     "@angular/compiler-cli": "^14.0.2",
     "@angular/language-service": "^14.0.0",
-    "@angular/router": "^14.0.0",
+    "@angular/router": "^14.0.2",
     "@types/jasmine": "^4.0.3",
     "@types/jasminewd2": "^2.0.10",
     "@types/node": "^18.0.0",

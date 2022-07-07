@@ -18,7 +18,7 @@
     "@angular/common": "^14.0.3",
     "@angular/compiler": "^14.0.4",
     "@angular/core": "^14.0.2",
-    "@angular/platform-browser": "^14.0.4",
+    "@angular/platform-browser": "^14.0.5",
     "@angular/platform-browser-dynamic": "^14.0.4",
     "core-js": "^3.23.3",
     "rxjs": "^7.5.5",

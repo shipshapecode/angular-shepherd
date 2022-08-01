@@ -34,7 +34,7 @@
     "@angular/router": "^14.1.0",
     "@types/jasmine": "^4.0.3",
     "@types/jasminewd2": "^2.0.10",
-    "@types/node": "^18.6.2",
+    "@types/node": "^18.6.3",
     "codelyzer": "^6.0.2",
     "jasmine-core": "^4.3.0",
     "jasmine-spec-reporter": "^7.0.0",

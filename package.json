@@ -19,7 +19,7 @@
     "@angular/compiler": "^14.1.0",
     "@angular/core": "^14.0.2",
     "@angular/platform-browser": "^14.1.0",
-    "@angular/platform-browser-dynamic": "^14.1.0",
+    "@angular/platform-browser-dynamic": "^14.1.1",
     "core-js": "^3.24.1",
     "rxjs": "^7.5.6",
     "shepherd.js": "^10.0.1",

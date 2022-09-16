@@ -12,6 +12,7 @@ export class ShepherdService {
   defaultStepOptions: Step.StepOptions = {};
   errorTitle = null;
   isActive = false;
+  keyboardNavigation = true;
   messageForUser: string = null;
   modal = false;
   requiredElements = [];
@@ -140,10 +141,11 @@ export class ShepherdService {
    * Initializes the tour, creates a new Shepherd.Tour. sets options, and binds events
    */
   private _initialize() {
-    const tourObject = new Shepherd.Tour({
+    const tourObject = this.tourObject || new Shepherd.Tour({
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,
       defaultStepOptions: this.defaultStepOptions,
+      keyboardNavigation: this.keyboardNavigation,
       tourName: this.tourName,
       useModalOverlay: this.modal
     });

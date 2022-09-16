@@ -141,7 +141,7 @@ export class ShepherdService {
    * Initializes the tour, creates a new Shepherd.Tour. sets options, and binds events
    */
   private _initialize() {
-    const tourObject = this.tourObject || new Shepherd.Tour({
+    const tourObject = new Shepherd.Tour({
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,
       defaultStepOptions: this.defaultStepOptions,

@@ -12,6 +12,7 @@ export class ShepherdService {
   defaultStepOptions: Step.StepOptions = {};
   errorTitle = null;
   isActive = false;
+  keyboardNavigation = true;
   messageForUser: string = null;
   modal = false;
   requiredElements = [];
@@ -144,6 +145,7 @@ export class ShepherdService {
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,
       defaultStepOptions: this.defaultStepOptions,
+      keyboardNavigation: this.keyboardNavigation,
       tourName: this.tourName,
       useModalOverlay: this.modal
     });

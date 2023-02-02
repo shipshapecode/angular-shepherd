@@ -23,6 +23,15 @@
             "tsConfig": "projects/shepherd/tsconfig.spec.json",
             "karmaConfig": "projects/shepherd/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/shepherd/**/*.ts",
+              "projects/shepherd/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -110,6 +119,15 @@
               "projects/shepherd-tester/src/assets"
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/shepherd-tester//**/*.ts",
+              "projects/shepherd-tester//**/*.html"
+            ]
+          }
         }
       }
     },
@@ -129,12 +147,25 @@
               "devServerTarget": "shepherd-tester:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/shepherd-tester-e2e//**/*.ts",
+              "projects/shepherd-tester-e2e//**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "shepherd",
   "cli": {
-    "analytics": "02495330-e062-4d0b-8606-581c26727064"
+    "analytics": "02495330-e062-4d0b-8606-581c26727064",
+    "schematicCollections": [
+      "@angular-eslint/schematics",
+      "@angular-eslint/schematics",
+      "@angular-eslint/schematics"
+    ]
   }
 }

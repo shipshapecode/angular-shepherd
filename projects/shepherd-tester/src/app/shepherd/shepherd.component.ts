@@ -3,7 +3,7 @@ import { ShepherdService } from '../../../../shepherd/src/lib/shepherd.service';
 import { steps as defaultSteps, defaultStepOptions} from '../data';
 
 @Component({
-  selector: 'shepherd',
+  selector: 'app-shepherd',
   templateUrl: './shepherd.component.html',
   styleUrls: ['./shepherd.component.css']
 })

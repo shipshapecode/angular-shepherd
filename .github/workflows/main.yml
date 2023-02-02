@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - main
     tags:
       - v*
 
@@ -17,6 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: volta-cli/action@v1
       - run: npm install
+      - run: npm run lint
       - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
   automerge:
     needs: [test]

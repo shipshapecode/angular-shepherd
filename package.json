@@ -32,7 +32,7 @@
     "@angular-eslint/eslint-plugin": "15.2.0",
     "@angular-eslint/eslint-plugin-template": "15.2.0",
     "@angular-eslint/schematics": "15.2.0",
-    "@angular-eslint/template-parser": "15.2.0",
+    "@angular-eslint/template-parser": "15.2.1",
     "@angular/cli": "^15.1.5",
     "@angular/compiler-cli": "^15.1.4",
     "@angular/language-service": "^15.1.4",

@@ -42,7 +42,7 @@
     "@types/node": "^18.14.1",
     "@typescript-eslint/eslint-plugin": "5.53.0",
     "@typescript-eslint/parser": "5.53.0",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "jasmine-core": "^4.5.0",
     "jasmine-spec-reporter": "^7.0.0",
     "karma": "^6.4.1",

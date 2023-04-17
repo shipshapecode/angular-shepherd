@@ -18,6 +18,7 @@ export class ShepherdService {
   requiredElements = [];
   tourName = undefined;
   tourObject: Shepherd.Tour = null;
+  exitOnEsc = true;
 
   constructor () {
   }
@@ -147,7 +148,8 @@ export class ShepherdService {
       defaultStepOptions: this.defaultStepOptions,
       keyboardNavigation: this.keyboardNavigation,
       tourName: this.tourName,
-      useModalOverlay: this.modal
+      useModalOverlay: this.modal,
+      exitOnEsc: this.exitOnEsc
     });
 
     tourObject.on('complete', this.onTourFinish.bind(this, 'complete'));

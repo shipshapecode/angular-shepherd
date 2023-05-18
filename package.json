@@ -31,7 +31,7 @@
     "@angular-eslint/builder": "16.0.1",
     "@angular-eslint/eslint-plugin": "16.0.1",
     "@angular-eslint/eslint-plugin-template": "16.0.2",
-    "@angular-eslint/schematics": "16.0.1",
+    "@angular-eslint/schematics": "16.0.2",
     "@angular-eslint/template-parser": "16.0.1",
     "@angular/cli": "^15.2.7",
     "@angular/compiler-cli": "^15.2.8",

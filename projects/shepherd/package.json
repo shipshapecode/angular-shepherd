@@ -1,6 +1,6 @@
 {
   "name": "angular-shepherd",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "description": "An Angular wrapper for the site tour library Shepherd.",
   "keywords": [
     "angular",
@@ -19,7 +19,7 @@
     "shepherd.js": "^11.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
   }
 }

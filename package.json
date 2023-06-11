@@ -1,6 +1,6 @@
 {
   "name": "angular-shepherd",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -14,12 +14,12 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^15.2.8",
-    "@angular/common": "^15.2.8",
+    "@angular/animations": "^16.0.5",
+    "@angular/common": "^16.0.5",
     "@angular/compiler": "^16.0.5",
-    "@angular/core": "^15.1.0",
-    "@angular/platform-browser": "^15.2.6",
-    "@angular/platform-browser-dynamic": "^15.2.8",
+    "@angular/core": "^16.0.5",
+    "@angular/platform-browser": "^16.0.5",
+    "@angular/platform-browser-dynamic": "^16.0.5",
     "core-js": "^3.30.2",
     "rxjs": "^7.8.1",
     "shepherd.js": "^11.0.1",
@@ -27,16 +27,16 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.7",
+    "@angular-devkit/build-angular": "^16.0.5",
     "@angular-eslint/builder": "16.0.3",
     "@angular-eslint/eslint-plugin": "16.0.3",
     "@angular-eslint/eslint-plugin-template": "16.0.3",
     "@angular-eslint/schematics": "16.0.3",
     "@angular-eslint/template-parser": "16.0.3",
-    "@angular/cli": "^15.2.7",
-    "@angular/compiler-cli": "^15.2.8",
+    "@angular/cli": "^16.0.5",
+    "@angular/compiler-cli": "^16.0.5",
     "@angular/language-service": "^16.0.5",
-    "@angular/router": "^15.2.8",
+    "@angular/router": "^16.0.5",
     "@types/jasmine": "^4.3.2",
     "@types/jasminewd2": "^2.0.10",
     "@types/node": "^20.2.5",
@@ -53,7 +53,7 @@
     "ng-packagr": "^16.0.1",
     "protractor": "~7.0.0",
     "ts-node": "~10.9.1",
-    "typescript": "~4.9.5"
+    "typescript": "~5.0.2"
   },
   "volta": {
     "node": "16.13.1"

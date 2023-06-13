@@ -8,7 +8,11 @@
     "site tour",
     "tour"
   ],
-  "repository": "https://github.com/shipshapecode/angular-shepherd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shipshapecode/angular-shepherd.git"
+  },
+  "homepage": "https://github.com/shipshapecode/angular-shepherd",
   "license": "MIT",
   "author": {
     "name": "Robert Wagner",

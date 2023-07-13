@@ -39,7 +39,7 @@
     "@angular/router": "^16.1.4",
     "@types/jasmine": "^4.3.5",
     "@types/jasminewd2": "^2.0.10",
-    "@types/node": "^20.4.1",
+    "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "6.0.0",
     "@typescript-eslint/parser": "6.0.0",
     "eslint": "^8.44.0",

@@ -24,7 +24,7 @@
     "rxjs": "^7.8.1",
     "shepherd.js": "^11.2.0",
     "tslib": "^2.6.0",
-    "zone.js": "~0.13.1"
+    "zone.js": "~0.13.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.4",

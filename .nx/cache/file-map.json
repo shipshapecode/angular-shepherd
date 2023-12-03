@@ -1,0 +1,294 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.2",
+  "deps": {
+    "@angular/animations": "^17.0.4",
+    "@angular/common": "^17.0.4",
+    "@angular/compiler": "^17.0.4",
+    "@angular/core": "^17.0.4",
+    "@angular/platform-browser": "^17.0.4",
+    "@angular/platform-browser-dynamic": "^17.0.4",
+    "core-js": "^3.33.1",
+    "rxjs": "^7.8.1",
+    "shepherd.js": "^11.2.0",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.14.2",
+    "@angular-devkit/build-angular": "^17.0.3",
+    "@angular-eslint/builder": "17.1.0",
+    "@angular-eslint/eslint-plugin": "17.1.0",
+    "@angular-eslint/eslint-plugin-template": "17.1.0",
+    "@angular-eslint/schematics": "17.1.0",
+    "@angular-eslint/template-parser": "17.1.0",
+    "@angular/cli": "^17.0.3",
+    "@angular/compiler-cli": "^17.0.4",
+    "@angular/language-service": "^17.0.4",
+    "@angular/router": "^17.0.4",
+    "@types/jasmine": "^4.3.5",
+    "@types/jasminewd2": "^2.0.13",
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "jasmine-core": "^5.0.1",
+    "jasmine-spec-reporter": "^7.0.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^5.1.0",
+    "karma-jasmine-html-reporter": "^2.1.0",
+    "ng-packagr": "^17.0.2",
+    "protractor": "~7.0.0",
+    "ts-node": "~10.9.1",
+    "typescript": "~5.2.2"
+  },
+  "pathMappings": {
+    "shepherd": [
+      "dist/shepherd"
+    ],
+    "shepherd/*": [
+      "dist/shepherd/*"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "11791638009474165083"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "12050704237213723290"
+      },
+      {
+        "file": ".github/dependabot.yml",
+        "hash": "13857448145827186982"
+      },
+      {
+        "file": ".github/workflows/main.yml",
+        "hash": "13475126929085166097"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "18113675205197800970"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "18422026658418424775"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "670249630721626802"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "16811520454510390337"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "2900517620416112525"
+      },
+      {
+        "file": ".tool-versions",
+        "hash": "15956512790039001483"
+      },
+      {
+        "file": "LICENSE.md",
+        "hash": "11889389548263254366"
+      },
+      {
+        "file": "README.md",
+        "hash": "7632731311464381011"
+      },
+      {
+        "file": "angular.json",
+        "hash": "13603869060837354070"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "18224757503383326781"
+      },
+      {
+        "file": "package.json",
+        "hash": "4901496216075326411"
+      },
+      {
+        "file": "projects/shepherd/.eslintrc.json",
+        "hash": "13521343640683326256"
+      },
+      {
+        "file": "projects/shepherd/LICENSE.md",
+        "hash": "11889389548263254366"
+      },
+      {
+        "file": "projects/shepherd/README.md",
+        "hash": "16581299343594070608"
+      },
+      {
+        "file": "projects/shepherd/karma.conf.js",
+        "hash": "14390035637413935045"
+      },
+      {
+        "file": "projects/shepherd/ng-package.json",
+        "hash": "16751487158785400474"
+      },
+      {
+        "file": "projects/shepherd/package.json",
+        "hash": "12216128468713767465"
+      },
+      {
+        "file": "projects/shepherd/src/lib/shepherd.service.spec.ts",
+        "hash": "7052418330012288219"
+      },
+      {
+        "file": "projects/shepherd/src/lib/shepherd.service.ts",
+        "hash": "7705411564807754460"
+      },
+      {
+        "file": "projects/shepherd/src/lib/utils/buttons.ts",
+        "hash": "16958722872654560508"
+      },
+      {
+        "file": "projects/shepherd/src/lib/utils/dom.ts",
+        "hash": "11026308585325889400"
+      },
+      {
+        "file": "projects/shepherd/src/public_api.ts",
+        "hash": "6759305494281688779"
+      },
+      {
+        "file": "projects/shepherd/src/test.ts",
+        "hash": "13822631999737109367"
+      },
+      {
+        "file": "projects/shepherd/tsconfig.lib.json",
+        "hash": "2739955627809106157"
+      },
+      {
+        "file": "projects/shepherd/tsconfig.spec.json",
+        "hash": "9893866977913749242"
+      },
+      {
+        "file": "projects/shepherd-tester/.eslintrc.json",
+        "hash": "9630014108160970286"
+      },
+      {
+        "file": "projects/shepherd-tester/browserslist",
+        "hash": "568824818244017255"
+      },
+      {
+        "file": "projects/shepherd-tester/karma.conf.js",
+        "hash": "7548281707981936069"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/app.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/app.component.html",
+        "hash": "17486456985391555888"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/app.component.spec.ts",
+        "hash": "11383264306772718241"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/app.component.ts",
+        "hash": "3796482869675057084"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/app.module.ts",
+        "hash": "7888403430432542101"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/data.ts",
+        "hash": "4366077076876868896"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/shepherd/shepherd.component.css",
+        "hash": "1773084993911728485"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/shepherd/shepherd.component.html",
+        "hash": "14776411788244115324"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/shepherd/shepherd.component.spec.ts",
+        "hash": "7908136181272549341"
+      },
+      {
+        "file": "projects/shepherd-tester/src/app/shepherd/shepherd.component.ts",
+        "hash": "11081176203542102587"
+      },
+      {
+        "file": "projects/shepherd-tester/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/shepherd-tester/src/environments/environment.prod.ts",
+        "hash": "5406836414239361753"
+      },
+      {
+        "file": "projects/shepherd-tester/src/environments/environment.ts",
+        "hash": "5207092130812246610"
+      },
+      {
+        "file": "projects/shepherd-tester/src/favicon.ico",
+        "hash": "14356862334585494759"
+      },
+      {
+        "file": "projects/shepherd-tester/src/index.html",
+        "hash": "14198173353913759919"
+      },
+      {
+        "file": "projects/shepherd-tester/src/main.ts",
+        "hash": "10677612470474905821"
+      },
+      {
+        "file": "projects/shepherd-tester/src/polyfills.ts",
+        "hash": "444293311199047560"
+      },
+      {
+        "file": "projects/shepherd-tester/src/styles.css",
+        "hash": "5195668842064076916"
+      },
+      {
+        "file": "projects/shepherd-tester/src/test.ts",
+        "hash": "183221735733658544"
+      },
+      {
+        "file": "projects/shepherd-tester/tsconfig.app.json",
+        "hash": "3646132595779762436"
+      },
+      {
+        "file": "projects/shepherd-tester/tsconfig.spec.json",
+        "hash": "13234018271912124159"
+      },
+      {
+        "file": "projects/shepherd-tester-e2e/.eslintrc.json",
+        "hash": "13919297205219183871"
+      },
+      {
+        "file": "projects/shepherd-tester-e2e/protractor.conf.js",
+        "hash": "17257904716340319593"
+      },
+      {
+        "file": "projects/shepherd-tester-e2e/src/app.e2e-spec.ts",
+        "hash": "1407452367798896687"
+      },
+      {
+        "file": "projects/shepherd-tester-e2e/src/app.po.ts",
+        "hash": "9192388978428288182"
+      },
+      {
+        "file": "projects/shepherd-tester-e2e/tsconfig.e2e.json",
+        "hash": "11963676050242484417"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "4607147373621247204"
+      }
+    ]
+  }
+}

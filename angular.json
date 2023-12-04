@@ -19,6 +19,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "projects/shepherd/tsconfig.spec.json",
             "karmaConfig": "projects/shepherd/karma.conf.js"
           }

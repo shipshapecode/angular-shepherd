@@ -19,7 +19,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/shepherd/src/test.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "projects/shepherd/tsconfig.spec.json",
             "karmaConfig": "projects/shepherd/karma.conf.js"
           }
@@ -48,7 +51,7 @@
             "outputPath": "dist/shepherd-tester",
             "index": "projects/shepherd-tester/src/index.html",
             "main": "projects/shepherd-tester/src/main.ts",
-            "polyfills": "zone.js",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/shepherd-tester/tsconfig.app.json",
             "assets": [
               "projects/shepherd-tester/src/favicon.ico",
@@ -106,8 +109,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/shepherd-tester/src/test.ts",
-            "polyfills": "zone.js/testing",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "projects/shepherd-tester/tsconfig.spec.json",
             "karmaConfig": "projects/shepherd-tester/karma.conf.js",
             "styles": [

@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: volta-cli/action@v1
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
       - run: npm install
       - run: npm run lint
       - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless

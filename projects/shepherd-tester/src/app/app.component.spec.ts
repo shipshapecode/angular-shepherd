@@ -1,18 +1,15 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { ShepherdComponent } from './shepherd/shepherd.component';
+import { TestBed, waitForAsync } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
+import { ShepherdComponent } from "./shepherd/shepherd.component";
 
-describe('AppComponent', () => {
-  beforeEach(async(() => {
+describe("AppComponent", () => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent, 
-        ShepherdComponent
-      ],
+      declarations: [AppComponent, ShepherdComponent],
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it("should create the app", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
@@ -21,7 +18,7 @@ describe('AppComponent', () => {
   it(`should have as title 'shepherd-tester'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('shepherd-tester');
+    expect(app.title).toEqual("shepherd-tester");
   });
 
   // it('should render title in a h1 tag', () => {

@@ -1,18 +1,22 @@
 {
   "name": "angular-shepherd",
   "version": "17.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build_lib": "ng build shepherd",
-    "npm_pack": "cd dist/angular-shepherd && npm pack",
-    "package": "npm run build_lib && npm run npm_pack"
-  },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shepherd-pro/angular-shepherd.git"
+  },
+  "scripts": {
+    "build": "ng build",
+    "build_lib": "ng build shepherd",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "ng": "ng",
+    "npm_pack": "cd dist/angular-shepherd && npm pack",
+    "package": "npm run build_lib && npm run npm_pack",
+    "start": "ng serve",
+    "test": "ng test"
+  },
   "dependencies": {
     "@angular/animations": "^18.0.0",
     "@angular/common": "^18.0.0",
@@ -54,6 +58,7 @@
     "karma-jasmine-html-reporter": "^2.1.0",
     "ng-packagr": "^18.0.0",
     "protractor": "~7.0.0",
+    "release-plan": "^0.9.0",
     "ts-node": "~10.9.1",
     "typescript": "~5.4.5"
   },

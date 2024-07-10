@@ -1,6 +1,5 @@
 {
   "name": "angular-shepherd",
-  "version": "18.0.0",
   "private": true,
   "repository": {
     "type": "git",

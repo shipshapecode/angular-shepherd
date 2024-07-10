@@ -1,6 +1,6 @@
 {
   "name": "angular-shepherd",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -43,7 +43,8 @@
     "@angular/compiler-cli": "^18.0.0",
     "@angular/language-service": "^18.0.0",
     "@angular/router": "^18.0.0",
-    "@release-it-plugins/lerna-changelog": "^5.0.0",
+    "@release-it-plugins/lerna-changelog": "^7.0.0",
+    "@release-it/bumper": "^6.0.1",
     "@types/jasmine": "^5.1.4",
     "@types/jasminewd2": "^2.0.13",
     "@types/node": "^20.10.4",
@@ -59,7 +60,7 @@
     "karma-jasmine-html-reporter": "^2.1.0",
     "ng-packagr": "^18.0.0",
     "protractor": "~7.0.0",
-    "release-it": "^15.5.0",
+    "release-it": "^17.5.0",
     "ts-node": "~10.9.1",
     "typescript": "~5.4.5"
   },
@@ -71,6 +72,9 @@
   },
   "release-it": {
     "plugins": {
+      "@release-it/bumper": {
+        "out": "projects/shepherd/package.json"
+      },
       "@release-it-plugins/lerna-changelog": {
         "infile": "CHANGELOG.md",
         "launchEditor": true

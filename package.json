@@ -46,7 +46,7 @@
     "@release-it/bumper": "^6.0.1",
     "@types/jasmine": "^5.1.4",
     "@types/jasminewd2": "^2.0.13",
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.14.10",
     "@typescript-eslint/eslint-plugin": "7.13",
     "@typescript-eslint/parser": "7.13",
     "eslint": "^8.57.0",

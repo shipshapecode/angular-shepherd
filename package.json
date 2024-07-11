@@ -60,7 +60,7 @@
     "ng-packagr": "^18.1.0",
     "protractor": "~7.0.0",
     "release-it": "^17.5.0",
-    "ts-node": "~10.9.1",
+    "ts-node": "~10.9.2",
     "typescript": "~5.4.5"
   },
   "volta": {

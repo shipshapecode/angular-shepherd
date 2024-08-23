@@ -40,7 +40,7 @@
     "@angular-eslint/template-parser": "18.2.0",
     "@angular/cli": "18.2.0",
     "@angular/compiler-cli": "^18.0.0",
-    "@angular/language-service": "^18.2.0",
+    "@angular/language-service": "^18.2.1",
     "@angular/router": "^18.0.0",
     "@release-it-plugins/lerna-changelog": "^7.0.0",
     "@release-it/bumper": "^6.0.1",

@@ -254,8 +254,8 @@ const builtInButtons = {
 
 **⚠️ You can't set up a type and an action at the same time inside a button**.
 
-To learn more about button properties, look at the [documentation](https://docs.shepherdpro.com/api/step/classes/step/).
+To learn more about button properties, look at the [documentation](https://docs.shepherdjs.dev/api/step/interfaces/stepoptionsbutton/).
 
 ## Step Options
 
-See the [Step docs](https://docs.shepherdpro.com/api/step/classes/step/) for all available Step options.
+See the [Step docs](https://docs.shepherdjs.dev/api/step/classes/step/) for all available Step options.

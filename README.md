@@ -25,6 +25,7 @@ It provides additional functionality, on top of Shepherd, as well.
 * Angular 16: 16.x
 * Angular 17: 17.x
 * Angular 18: 18.x
+* Angular 19: 19.x
 
 This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions
 of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!

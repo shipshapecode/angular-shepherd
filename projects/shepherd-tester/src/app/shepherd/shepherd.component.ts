@@ -5,7 +5,8 @@ import { steps as defaultSteps, defaultStepOptions} from '../data';
 @Component({
   selector: 'app-shepherd',
   templateUrl: './shepherd.component.html',
-  styleUrls: ['./shepherd.component.css']
+  styleUrls: ['./shepherd.component.css'],
+  standalone: true,
 })
 export class ShepherdComponent implements AfterViewInit {
 

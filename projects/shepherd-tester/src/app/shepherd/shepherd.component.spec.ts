@@ -8,7 +8,7 @@ describe("ShepherdComponent", () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ShepherdComponent],
+      imports: [ShepherdComponent],
     }).compileComponents();
   }));
 

@@ -5,7 +5,7 @@ import { ShepherdComponent } from "./shepherd/shepherd.component";
 describe("AppComponent", () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, ShepherdComponent],
+      imports: [AppComponent, ShepherdComponent],
     }).compileComponents();
   }));
 

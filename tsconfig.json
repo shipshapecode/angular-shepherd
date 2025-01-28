@@ -1,31 +1,28 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowArbitraryExtensions": true,
+    "allowSyntheticDefaultImports": false,
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "lib": ["es2018", "dom"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "outDir": "./dist/out-tsc",
     "target": "ES2022",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    "paths": {
-      "shepherd": [
-        "dist/shepherd"
-      ],
-      "shepherd/*": [
-        "dist/shepherd/*"
-      ]
-    },
-    "useDefineForClassFields": false
+    "typeRoots": ["node_modules/@types"],
+    "useDefineForClassFields": false,
+    // We don't want to include types dependencies in our compiled output, so tell TypeScript
+    // to enforce using `import type` instead of `import` for Types.
+    "verbatimModuleSyntax": true,
+    "allowJs": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true
   }
 }

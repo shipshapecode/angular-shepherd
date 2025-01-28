@@ -1,61 +1,65 @@
 import { Injectable } from '@angular/core';
-import Shepherd from 'shepherd.js';
+import { Tour, type TourOptions, type StepOptions } from 'shepherd.js';
 import { elementIsHidden } from './utils/dom';
 import { makeButton } from './utils/buttons';
-import Step from 'shepherd.js/src/types/step';
+
+interface RequiredElement {
+  message: string;
+  selector: string;
+  title: string;
+}
 @Injectable({
   providedIn: 'root'
 })
 export class ShepherdService {
-  confirmCancel = false;
-  confirmCancelMessage: string = null;
-  defaultStepOptions: Step.StepOptions = {};
-  errorTitle = null;
-  isActive = false;
-  keyboardNavigation = true;
-  messageForUser: string = null;
-  modal = false;
-  requiredElements = [];
-  tourName = undefined;
-  tourObject: Shepherd.Tour = null;
+  confirmCancel: TourOptions['confirmCancel'] = false;
+  confirmCancelMessage?: TourOptions['confirmCancelMessage'];
+  defaultStepOptions: StepOptions = {};
+  errorTitle?: string;
   exitOnEsc = true;
+  isActive = false;
+  keyboardNavigation: TourOptions['keyboardNavigation'] = true;
+  messageForUser: string | null = null;
+  modal = false;
+  requiredElements: Array<RequiredElement> = [];
+  tourName = undefined;
+  tourObject: Tour | null = null;
 
-  constructor () {
-  }
+  constructor() {}
 
   /**
    * Get the tour object and call back
    */
   back() {
-    this.tourObject.back();
+    this.tourObject?.back();
   }
 
   /**
    * Cancel the tour
    */
   cancel() {
-    this.tourObject.cancel();
+    this.tourObject?.cancel();
   }
 
   /**
    * Complete the tour
    */
   complete() {
-    this.tourObject.complete();
+    this.tourObject?.complete();
   }
 
   /**
    * Hides the current step
    */
   hide() {
-    this.tourObject.hide();
+    this.tourObject?.hide();
   }
 
   /**
    * Advance the tour to the next step
    */
   next() {
-    this.tourObject.next();
+    this.tourObject?.next();
   }
 
   /**
@@ -63,7 +67,7 @@ export class ShepherdService {
    * @param id The id of the step you want to show
    */
   show(id: string | number) {
-    this.tourObject.show(id);
+    this.tourObject?.show(id);
   }
 
   /**
@@ -71,7 +75,7 @@ export class ShepherdService {
    */
   start() {
     this.isActive = true;
-    this.tourObject.start();
+    this.tourObject?.start();
   }
 
   /**
@@ -86,24 +90,26 @@ export class ShepherdService {
    * Take a set of steps and create a tour object based on the current configuration
    * @param steps An array of steps
    */
-  addSteps(steps: Array<Step.StepOptions>) {
+  addSteps(steps: Array<StepOptions>) {
     this._initialize();
     const tour = this.tourObject;
 
-    // Return nothing if there are no steps
-    if (!steps || !Array.isArray(steps) || steps.length === 0) {
+    // Return nothing if there are no steps or if somehow there is no tour.
+    if (!tour || !steps || !Array.isArray(steps) || steps.length === 0) {
       return;
     }
 
     if (!this.requiredElementsPresent()) {
       tour.addStep({
-        buttons: [{
-          text: 'Exit',
-          action: tour.cancel
-        }],
+        buttons: [
+          {
+            text: 'Exit',
+            action: tour.cancel
+          }
+        ],
         id: 'error',
         title: this.errorTitle,
-        text: [this.messageForUser]
+        text: [this.messageForUser as string]
       });
       return;
     }
@@ -128,7 +134,10 @@ export class ShepherdService {
     this.requiredElements.forEach((element) => {
       const selectedElement = document.querySelector(element.selector);
 
-      if (allElementsPresent && (!selectedElement || elementIsHidden(selectedElement))) {
+      if (
+        allElementsPresent &&
+        (!selectedElement || elementIsHidden(selectedElement as HTMLElement))
+      ) {
         allElementsPresent = false;
         this.errorTitle = element.title;
         this.messageForUser = element.message;
@@ -142,7 +151,7 @@ export class ShepherdService {
    * Initializes the tour, creates a new Shepherd.Tour. sets options, and binds events
    */
   private _initialize() {
-    const tourObject = new Shepherd.Tour({
+    const tourObject = new Tour({
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,
       defaultStepOptions: this.defaultStepOptions,
@@ -155,6 +164,6 @@ export class ShepherdService {
     tourObject.on('complete', this.onTourFinish.bind(this, 'complete'));
     tourObject.on('cancel', this.onTourFinish.bind(this, 'cancel'));
 
-    this.tourObject = tourObject;
+    this.tourObject = tourObject as Tour;
   }
 }

@@ -1,3 +1,10 @@
+import type { StepOptionsButton } from 'shepherd.js';
+import type { ShepherdService } from '../shepherd.service';
+
+export type AngularShepherdButton = StepOptionsButton & {
+  type?: 'back' | 'cancel' | 'next';
+};
+
 /**
  * Creates a button of the specified type, with the given classes and text
  *
@@ -6,7 +13,10 @@
  * @param button.text The text for the button
  * @param button.action The action to call
  */
-export function makeButton(button) {
+export function makeButton(
+  this: ShepherdService,
+  button: AngularShepherdButton
+) {
   const { classes, disabled, label, secondary, type, text } = button;
   const builtInButtonTypes = ['back', 'cancel', 'next'];
 
@@ -15,7 +25,9 @@ export function makeButton(button) {
   }
 
   if (builtInButtonTypes.indexOf(type) === -1) {
-    throw new Error(`'type' property must be one of 'back', 'cancel', or 'next'`);
+    throw new Error(
+      `'type' property must be one of 'back', 'cancel', or 'next'`
+    );
   }
 
   return {

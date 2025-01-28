@@ -1,16 +1,15 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, type AfterViewInit } from '@angular/core';
 import { ShepherdService } from '../../../../shepherd/src/lib/shepherd.service';
-import { steps as defaultSteps, defaultStepOptions} from '../data';
+import { steps as defaultSteps, defaultStepOptions } from '../data';
 
 @Component({
   selector: 'app-shepherd',
   templateUrl: './shepherd.component.html',
   styleUrls: ['./shepherd.component.css'],
-  standalone: true,
+  standalone: true
 })
 export class ShepherdComponent implements AfterViewInit {
-
-  constructor(private shepherdService: ShepherdService) { }
+  constructor(private shepherdService: ShepherdService) {}
 
   ngAfterViewInit() {
     this.shepherdService.defaultStepOptions = defaultStepOptions;

@@ -29,10 +29,7 @@ const steps = [
         element: '.test-element',
         on: 'bottom'
       },
-      buttons: [
-        builtInButtons.cancel,
-        builtInButtons.next
-      ],
+      buttons: [builtInButtons.cancel, builtInButtons.next],
       classes: 'custom-class-name-1 custom-class-name-2',
       title: 'Welcome to Ember-Shepherd!',
       text: 'Test text',
@@ -53,7 +50,7 @@ describe('ShepherdService', () => {
       start() {
         expect(true).toBeTruthy('The tour was started');
       }
-    }
+    };
 
     service.addSteps(steps);
 
@@ -67,7 +64,10 @@ describe('ShepherdService', () => {
     const service: ShepherdService = TestBed.inject(ShepherdService);
     const mockTourObject = {
       start() {
-        expect(steps[0].options.scrollToHandler()).toBe('custom scrollToHandler', 'The handler was passed through as an option on the step');
+        expect(steps[0]?.options.scrollToHandler()).toBe(
+          'custom scrollToHandler',
+          'The handler was passed through as an option on the step'
+        );
       }
     };
 

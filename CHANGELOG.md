@@ -1,6 +1,17 @@
 # Changelog
 
 
+
+## v19.0.0 (2025-01-28)
+
+#### :boom: Breaking Change
+* [#2606](https://github.com/shipshapecode/angular-shepherd/pull/2606) Update to Shepherd 14.x ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+* [#2566](https://github.com/shipshapecode/angular-shepherd/pull/2566) bump-angular-version-to-19 ([@akhromets](https://github.com/akhromets))
+
+#### Committers: 2
+- Oleksii Khromets ([@akhromets](https://github.com/akhromets))
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
 ## v18.0.2 (2024-07-10)
 
 ## v18.0.1 (2024-07-10)

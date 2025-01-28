@@ -9,8 +9,6 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
     "lib": ["es2018", "dom"],
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -21,8 +19,6 @@
     // We don't want to include types dependencies in our compiled output, so tell TypeScript
     // to enforce using `import type` instead of `import` for Types.
     "verbatimModuleSyntax": true,
-    "allowJs": true,
     "strict": true,
-    "noUncheckedIndexedAccess": true
   }
 }

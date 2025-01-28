@@ -59,7 +59,7 @@ at the app level ensures you only create one instance of Shepherd.**
 In that component you will want to use `AfterViewInit` to `addSteps` to the Shepherd service.
 
 ```typescript
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, type AfterViewInit } from '@angular/core';
 import { ShepherdService } from 'angular-shepherd';
 import { steps as defaultSteps, defaultStepOptions} from '../data';
 

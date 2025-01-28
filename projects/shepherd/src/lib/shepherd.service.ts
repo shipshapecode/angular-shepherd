@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Tour, type TourOptions, type StepOptions } from 'shepherd.js';
+import Shepherd, {
+  type TourOptions,
+  type StepOptions,
+  type Tour
+} from 'shepherd.js';
 import { elementIsHidden } from './utils/dom';
 import { makeButton } from './utils/buttons';
 
@@ -151,7 +155,7 @@ export class ShepherdService {
    * Initializes the tour, creates a new Shepherd.Tour. sets options, and binds events
    */
   private _initialize() {
-    const tourObject = new Tour({
+    const tourObject = new Shepherd.Tour({
       confirmCancel: this.confirmCancel,
       confirmCancelMessage: this.confirmCancelMessage,
       defaultStepOptions: this.defaultStepOptions,
@@ -164,6 +168,6 @@ export class ShepherdService {
     tourObject.on('complete', this.onTourFinish.bind(this, 'complete'));
     tourObject.on('cancel', this.onTourFinish.bind(this, 'cancel'));
 
-    this.tourObject = tourObject as Tour;
+    this.tourObject = tourObject;
   }
 }

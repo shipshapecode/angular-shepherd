@@ -2,6 +2,15 @@
 
 
 
+
+## v19.0.2 (2025-01-29)
+
+#### :bug: Bug Fix
+* [#2609](https://github.com/shipshapecode/angular-shepherd/pull/2609) Update types for `exitOnEsc` and `tourName` ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 1
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
 ## v19.0.1 (2025-01-28)
 
 ## v19.0.0 (2025-01-28)

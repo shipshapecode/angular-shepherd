@@ -20,13 +20,13 @@ export class ShepherdService {
   confirmCancelMessage?: TourOptions['confirmCancelMessage'];
   defaultStepOptions: StepOptions = {};
   errorTitle?: string;
-  exitOnEsc = true;
+  exitOnEsc: TourOptions['exitOnEsc'] = true;
   isActive = false;
   keyboardNavigation: TourOptions['keyboardNavigation'] = true;
   messageForUser: string | null = null;
   modal = false;
   requiredElements: Array<RequiredElement> = [];
-  tourName = undefined;
+  tourName: TourOptions['tourName'] = undefined;
   tourObject: Tour | null = null;
 
   constructor() {}

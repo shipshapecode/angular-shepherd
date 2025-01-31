@@ -41,7 +41,7 @@
     "@angular/cli": "^19.1.4",
     "@angular/compiler-cli": "^19.0.0",
     "@angular/language-service": "^19.1.4",
-    "@angular/router": "^19.0.0",
+    "@angular/router": "^19.1.4",
     "@release-it-plugins/lerna-changelog": "^7.0.0",
     "@release-it/bumper": "^6.0.1",
     "@types/jasmine": "^5.1.4",

@@ -39,7 +39,7 @@
     "@angular-eslint/schematics": "^19.0.0",
     "@angular-eslint/template-parser": "^19.0.0",
     "@angular/cli": "^19.1.6",
-    "@angular/compiler-cli": "^19.1.4",
+    "@angular/compiler-cli": "^19.2.7",
     "@angular/language-service": "^19.1.5",
     "@angular/router": "^19.1.4",
     "@release-it-plugins/lerna-changelog": "^7.0.0",

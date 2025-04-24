@@ -20,7 +20,7 @@
     "@angular/animations": "^19.1.4",
     "@angular/common": "^19.0.0",
     "@angular/compiler": "^19.0.0",
-    "@angular/core": "^19.1.4",
+    "@angular/core": "^19.2.8",
     "@angular/platform-browser": "^19.1.4",
     "@angular/platform-browser-dynamic": "^19.1.4",
     "core-js": "^3.39.0",

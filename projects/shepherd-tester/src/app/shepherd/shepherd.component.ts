@@ -1,4 +1,4 @@
-import { Component, type AfterViewInit } from '@angular/core';
+import { Component, inject, type AfterViewInit } from '@angular/core';
 import { ShepherdService } from '../../../../shepherd/src/lib/shepherd.service';
 import { steps as defaultSteps, defaultStepOptions } from '../data';
 
@@ -9,7 +9,7 @@ import { steps as defaultSteps, defaultStepOptions } from '../data';
   standalone: true
 })
 export class ShepherdComponent implements AfterViewInit {
-  constructor(private shepherdService: ShepherdService) {}
+  private shepherdService = inject(ShepherdService);
 
   ngAfterViewInit() {
     this.shepherdService.defaultStepOptions = defaultStepOptions;

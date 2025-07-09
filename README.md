@@ -22,6 +22,7 @@ This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/s
 - Angular 17: 17.x
 - Angular 18: 18.x
 - Angular 19: 19.x
+- Angular 20: 20.x
 
 This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!
 

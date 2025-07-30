@@ -3,6 +3,15 @@
 
 
 
+
+## v20.0.0 (2025-07-30)
+
+#### :boom: Breaking Change
+* [#2744](https://github.com/shipshapecode/angular-shepherd/pull/2744) Update Angular version to v20 ([@douglasss](https://github.com/douglasss))
+
+#### Committers: 1
+- Douglas Silva ([@douglasss](https://github.com/douglasss))
+
 ## v19.0.2 (2025-01-29)
 
 #### :bug: Bug Fix

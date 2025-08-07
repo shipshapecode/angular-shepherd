@@ -17,7 +17,7 @@
     "test": "ng test"
   },
   "dependencies": {
-    "@angular/animations": "^20.0.5",
+    "@angular/animations": "^20.1.6",
     "@angular/common": "^20.0.5",
     "@angular/compiler": "^20.0.5",
     "@angular/core": "^20.0.5",

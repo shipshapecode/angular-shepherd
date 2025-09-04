@@ -22,7 +22,7 @@
     "@angular/compiler": "^20.0.5",
     "@angular/core": "^20.0.5",
     "@angular/platform-browser": "^20.0.5",
-    "@angular/platform-browser-dynamic": "^20.0.5",
+    "@angular/platform-browser-dynamic": "^20.2.4",
     "core-js": "^3.39.0",
     "rxjs": "^7.8.1",
     "shepherd.js": "^14.5.1",

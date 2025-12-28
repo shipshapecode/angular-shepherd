@@ -135,34 +135,6 @@
           }
         }
       }
-    },
-    "shepherd-tester-e2e": {
-      "root": "projects/shepherd-tester-e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/shepherd-tester-e2e/protractor.conf.js",
-            "devServerTarget": "shepherd-tester:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "shepherd-tester:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/shepherd-tester-e2e//**/*.ts",
-              "projects/shepherd-tester-e2e//**/*.html"
-            ]
-          }
-        }
-      }
     }
   },
   "cli": {

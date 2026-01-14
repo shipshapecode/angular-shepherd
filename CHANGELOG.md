@@ -2,6 +2,19 @@
 
 ## Release (2026-01-14)
 
+* angular-shepherd 21.0.3 (patch)
+
+#### :house: Internal
+* `angular-shepherd`
+  * [#2882](https://github.com/shipshapecode/angular-shepherd/pull/2882) Update github link ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+* Other
+  * [#2880](https://github.com/shipshapecode/angular-shepherd/pull/2880) Remove release-it ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 1
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+## Release (2026-01-14)
+
 * angular-shepherd 21.0.2 (patch)
 
 #### :house: Internal

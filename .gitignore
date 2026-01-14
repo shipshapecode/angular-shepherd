@@ -2,6 +2,7 @@
 
 # compiled output
 dist
+projects/shepherd/README.md
 /tmp
 /out-tsc
 

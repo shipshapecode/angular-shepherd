@@ -30,7 +30,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "module": "./dist/fesm2022/angular-shepherd.mjs",
   "types": "./dist/types/angular-shepherd.d.ts",

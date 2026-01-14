@@ -1,15 +1,11 @@
 {
   "solution": {
     "angular-shepherd": {
-      "impact": "major",
-      "oldVersion": "20.0.0",
-      "newVersion": "21.0.0",
+      "impact": "patch",
+      "oldVersion": "21.0.0",
+      "newVersion": "21.0.1",
       "tagName": "latest",
       "constraints": [
-        {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
-        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :house: Internal"
@@ -18,5 +14,5 @@
       "pkgJSONPath": "./projects/shepherd/package.json"
     }
   },
-  "description": "## Release (2026-01-14)\n\n* angular-shepherd 21.0.0 (major)\n\n#### :boom: Breaking Change\n* `angular-shepherd`\n  * [#2864](https://github.com/shipshapecode/angular-shepherd/pull/2864) Remove e2e test project, bump Angular deps to 21.x ([@muhamedkarajic](https://github.com/muhamedkarajic))\n\n#### :house: Internal\n* `angular-shepherd`\n  * [#2873](https://github.com/shipshapecode/angular-shepherd/pull/2873) Update release-plan config ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n* Other\n  * [#2871](https://github.com/shipshapecode/angular-shepherd/pull/2871) npm update ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 2\n- Muhamed Karajic ([@muhamedkarajic](https://github.com/muhamedkarajic))\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
+  "description": "## Release (2026-01-14)\n\n* angular-shepherd 21.0.1 (patch)\n\n#### :house: Internal\n* `angular-shepherd`\n  * [#2875](https://github.com/shipshapecode/angular-shepherd/pull/2875) More release-plan fixes ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 1\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
 }

@@ -1,4 +1,8 @@
 {
-  "solution": {},
+  "solution": {
+    "packages": {
+      "angular-shepherd": "projects/shepherd"
+    }
+  },
   "description": "## Release (2024-07-10)\n\n\n\n#### :boom: Breaking Change\n* `angular-shepherd`\n  * [#2243](https://github.com/shepherd-pro/angular-shepherd/pull/2243) update angular 18 ([@bastienmoulia](https://github.com/bastienmoulia))\n  * [#2113](https://github.com/shepherd-pro/angular-shepherd/pull/2113) [feature] increase to angular 17 ([@phhbr](https://github.com/phhbr))\n\n#### :memo: Documentation\n* `angular-shepherd`\n  * [#2245](https://github.com/shepherd-pro/angular-shepherd/pull/2245) Update README.md with latest doc links ([@sardul3](https://github.com/sardul3))\n\n#### :house: Internal\n* `angular-shepherd`\n  * [#1962](https://github.com/shepherd-pro/angular-shepherd/pull/1962) Update package lock ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 4\n- Bastien ([@bastienmoulia](https://github.com/bastienmoulia))\n- Phhbr ([@phhbr](https://github.com/phhbr))\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n- Sagar Poudel ([@sardul3](https://github.com/sardul3))\n"
 }

@@ -29,5 +29,8 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "directory": "../../dist/angular-shepherd"
+  },
+  "release-plan": {
+    "tagFormat": "v${version}"
   }
 }

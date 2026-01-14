@@ -32,6 +32,8 @@ jobs:
           node-version: 22
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
+      - name: Build library
+        run: npm run build_lib
       - name: Publish to NPM
         run: npx release-plan publish --provenance
         env:

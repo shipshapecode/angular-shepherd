@@ -14,8 +14,6 @@
     "e2e": "ng e2e",
     "lint": "ng lint",
     "ng": "ng",
-    "npm_pack": "cd dist/angular-shepherd && npm pack",
-    "package": "npm run build_lib && npm run npm_pack",
     "start": "ng serve",
     "test": "ng test"
   },

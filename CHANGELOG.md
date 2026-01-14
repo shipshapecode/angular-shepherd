@@ -1,5 +1,15 @@
 # Changelog
 
+## Release (2026-01-14)
+
+
+
+#### :boom: Breaking Change
+* [#2864](https://github.com/shipshapecode/angular-shepherd/pull/2864) Remove e2e test project, bump Angular deps to 21.x ([@muhamedkarajic](https://github.com/muhamedkarajic))
+
+#### Committers: 1
+- Muhamed Karajic ([@muhamedkarajic](https://github.com/muhamedkarajic))
+
 
 
 

@@ -27,9 +27,23 @@
     "@angular/core": "^21.0.0"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "directory": "../../dist/angular-shepherd"
+    "registry": "https://registry.npmjs.org"
   },
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/fesm2022/angular-shepherd.mjs",
+  "types": "./dist/types/angular-shepherd.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./dist/types/angular-shepherd.d.ts",
+      "default": "./dist/fesm2022/angular-shepherd.mjs"
+    }
+  },
+  "sideEffects": false,
   "release-plan": {
     "tagFormat": "v${version}"
   }

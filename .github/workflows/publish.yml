@@ -31,6 +31,7 @@ jobs:
         with:
           node-version: 22
           registry-url: 'https://registry.npmjs.org'
+      - run: npm install -g npm@latest # ensure that the globally installed npm is new enough to support OIDC
       - run: npm ci
       - name: Build library
         run: npm run build_lib

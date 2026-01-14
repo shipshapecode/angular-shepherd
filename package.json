@@ -1,13 +1,13 @@
 {
   "name": "angular-shepherd",
   "private": true,
-  "workspaces": [
-    "projects/shepherd"
-  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/shipshapecode/angular-shepherd.git"
   },
+  "workspaces": [
+    "projects/shepherd"
+  ],
   "scripts": {
     "build": "ng build",
     "build_lib": "ng build shepherd && cp README.md projects/shepherd/dist/",

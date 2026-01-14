@@ -43,8 +43,6 @@
     "@angular/compiler-cli": "^21.0.0",
     "@angular/language-service": "^21.0.0",
     "@angular/router": "^21.0.0",
-    "@release-it-plugins/lerna-changelog": "^8.0.1",
-    "@release-it/bumper": "^7.0.0",
     "@types/jasmine": "^5.1.8",
     "@types/jasminewd2": "^2.0.13",
     "@types/node": "^24.1.0",
@@ -60,31 +58,11 @@
     "karma-jasmine-html-reporter": "^2.1.0",
     "ng-packagr": "^21.0.0",
     "prettier": "^3.4.2",
-    "release-it": "^19.2.2",
     "release-plan": "^0.17.0",
     "ts-node": "~10.9.2",
     "typescript": "~5.9.0"
   },
   "volta": {
-    "node": "22.17.0"
-  },
-  "release-it": {
-    "plugins": {
-      "@release-it/bumper": {
-        "out": "projects/shepherd/package.json"
-      },
-      "@release-it-plugins/lerna-changelog": {
-        "infile": "CHANGELOG.md",
-        "launchEditor": true
-      }
-    },
-    "git": {
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
-    },
-    "npm": false
+    "node": "22.21.1"
   }
 }

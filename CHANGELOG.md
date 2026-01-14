@@ -2,6 +2,17 @@
 
 ## Release (2026-01-14)
 
+* angular-shepherd 21.0.5 (patch)
+
+#### :house: Internal
+* `angular-shepherd`
+  * [#2885](https://github.com/shipshapecode/angular-shepherd/pull/2885) Adjust README position ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 1
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+## Release (2026-01-14)
+
 * angular-shepherd 21.0.4 (patch)
 
 #### :house: Internal

@@ -2,8 +2,8 @@
   "solution": {
     "angular-shepherd": {
       "impact": "patch",
-      "oldVersion": "21.0.3",
-      "newVersion": "21.0.4",
+      "oldVersion": "21.0.4",
+      "newVersion": "21.0.5",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./projects/shepherd/package.json"
     }
   },
-  "description": "## Release (2026-01-14)\n\n* angular-shepherd 21.0.4 (patch)\n\n#### :house: Internal\n* `angular-shepherd`\n  * [#2883](https://github.com/shipshapecode/angular-shepherd/pull/2883) Ensure latest npm for publish ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 1\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
+  "description": "## Release (2026-01-14)\n\n* angular-shepherd 21.0.5 (patch)\n\n#### :house: Internal\n* `angular-shepherd`\n  * [#2885](https://github.com/shipshapecode/angular-shepherd/pull/2885) Adjust README position ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 1\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
 }

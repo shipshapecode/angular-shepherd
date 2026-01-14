@@ -60,6 +60,7 @@
     "ng-packagr": "^21.0.0",
     "prettier": "^3.4.2",
     "release-it": "^19.2.2",
+    "release-plan": "^0.17.0",
     "ts-node": "~10.9.2",
     "typescript": "~5.9.0"
   },

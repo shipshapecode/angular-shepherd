@@ -152,7 +152,7 @@ export class ShepherdService {
   }
 
   /**
-   * Initializes the tour, creates a new Shepherd.Tour. sets options, and binds events
+   * Initializes the tour, creates a new Shepherd.Tour. sets options, and binds events.
    */
   private _initialize() {
     const tourObject = new Shepherd.Tour({

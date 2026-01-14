@@ -1,5 +1,23 @@
 # Changelog
 
+## Release (2026-01-14)
+
+* angular-shepherd 21.0.0 (major)
+
+#### :boom: Breaking Change
+* `angular-shepherd`
+  * [#2864](https://github.com/shipshapecode/angular-shepherd/pull/2864) Remove e2e test project, bump Angular deps to 21.x ([@muhamedkarajic](https://github.com/muhamedkarajic))
+
+#### :house: Internal
+* `angular-shepherd`
+  * [#2873](https://github.com/shipshapecode/angular-shepherd/pull/2873) Update release-plan config ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+* Other
+  * [#2871](https://github.com/shipshapecode/angular-shepherd/pull/2871) npm update ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 2
+- Muhamed Karajic ([@muhamedkarajic](https://github.com/muhamedkarajic))
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
 
 
 

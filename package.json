@@ -6,7 +6,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:shepherd-pro/angular-shepherd.git"
+    "url": "git+ssh://git@github.com/shipshapecode/angular-shepherd.git"
   },
   "scripts": {
     "build": "ng build",

@@ -25,5 +25,9 @@
   "peerDependencies": {
     "@angular/common": "^21.0.0",
     "@angular/core": "^21.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "directory": "../../dist/angular-shepherd"
   }
 }

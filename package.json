@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^21.0.0",
-    "@angular-devkit/core": "^21.0.0",
+    "@angular-devkit/core": "^21.1.0",
     "@angular-devkit/schematics": "^21.0.0",
     "@angular-eslint/builder": "21.0.1",
     "@angular-eslint/eslint-plugin": "21.0.1",

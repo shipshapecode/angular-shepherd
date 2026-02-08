@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "ng build",
-    "build_lib": "ng build shepherd && cp README.md projects/shepherd/",
+    "build_lib": "ng build shepherd && cp README.md LICENSE.md projects/shepherd/",
     "e2e": "ng e2e",
     "lint": "ng lint",
     "ng": "ng",

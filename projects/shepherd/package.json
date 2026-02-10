@@ -13,7 +13,7 @@
     "url": "https://github.com/shipshapecode/angular-shepherd.git"
   },
   "homepage": "https://github.com/shipshapecode/angular-shepherd",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "author": {
     "name": "Robert Wagner",
     "email": "rwwagner90@gmail.com",
@@ -31,7 +31,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE.md"
   ],
   "module": "./dist/fesm2022/angular-shepherd.mjs",
   "types": "./dist/types/angular-shepherd.d.ts",

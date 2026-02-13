@@ -20,7 +20,7 @@
     "url": "https://github.com/RobbieTheWagner"
   },
   "dependencies": {
-    "shepherd.js": "^14.4.0"
+    "shepherd.js": "^15.0.0"
   },
   "peerDependencies": {
     "@angular/common": "^21.0.0",

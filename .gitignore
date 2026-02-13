@@ -3,6 +3,7 @@
 # compiled output
 dist
 projects/shepherd/README.md
+projects/shepherd/LICENSE.md
 /tmp
 /out-tsc
 

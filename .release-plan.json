@@ -1,18 +1,18 @@
 {
   "solution": {
     "angular-shepherd": {
-      "impact": "patch",
-      "oldVersion": "21.0.4",
-      "newVersion": "21.0.5",
+      "impact": "major",
+      "oldVersion": "21.0.5",
+      "newVersion": "22.0.0",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
         }
       ],
       "pkgJSONPath": "./projects/shepherd/package.json"
     }
   },
-  "description": "## Release (2026-01-14)\n\n* angular-shepherd 21.0.5 (patch)\n\n#### :house: Internal\n* `angular-shepherd`\n  * [#2885](https://github.com/shipshapecode/angular-shepherd/pull/2885) Adjust README position ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 1\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
+  "description": "## Release (2026-02-13)\n\n* angular-shepherd 22.0.0 (major)\n\n#### :boom: Breaking Change\n* `angular-shepherd`\n  * [#2933](https://github.com/shipshapecode/angular-shepherd/pull/2933) Update to shepherd.js 15.0.0 ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n  * [#2930](https://github.com/shipshapecode/angular-shepherd/pull/2930) Update license to AGPL ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 1\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
 }

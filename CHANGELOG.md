@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2026-02-13)
+
+* angular-shepherd 22.0.0 (major)
+
+#### :boom: Breaking Change
+* `angular-shepherd`
+  * [#2933](https://github.com/shipshapecode/angular-shepherd/pull/2933) Update to shepherd.js 15.0.0 ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+  * [#2930](https://github.com/shipshapecode/angular-shepherd/pull/2930) Update license to AGPL ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 1
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
 ## Release (2026-01-14)
 
 * angular-shepherd 21.0.5 (patch)

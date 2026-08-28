@@ -23,8 +23,8 @@
     "shepherd.js": "^15.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^21.0.0",
-    "@angular/core": "^21.0.0"
+    "@angular/common": ">=21.0.0",
+    "@angular/core": ">=21.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

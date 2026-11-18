@@ -45,12 +45,12 @@ export const steps: StepOptions[] = [
           <p>
             Angular Shepherd is a JavaScript library for guiding users through your Angular app.
             It is an Angular library that wraps <a href="https://github.com/shipshapecode/shepherd">Shepherd</a>
-            and extends its functionality. Shepherd uses <a href="https://popper.js.org/">Popper.js</a>,
-            another open source library, to position all of its steps and enable entrance and exit animations.
+            and extends its functionality. Shepherd has a built-in, dependency-free positioning engine
+            that places all of its steps and enables entrance and exit animations.
           </p>
         
           <p>
-            Popper makes sure your steps never end up off screen or cropped by an
+            It makes sure your steps never end up off screen or cropped by an
             overflow. Try resizing your browser to see what we mean.
           </p>`
   },

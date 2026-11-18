@@ -16,16 +16,9 @@ This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/s
 - Angular 11: 11.x
 - Angular 12: 12.x
 - Angular 13: 13.x
-- Angular 14: 14.x
-- Angular 15: 15.x
-- Angular 16: 16.x
-- Angular 17: 17.x
-- Angular 18: 18.x
-- Angular 19: 19.x
-- Angular 20: 20.x
-- Angular 21: 21.x
+- Angular 14 and newer: latest
 
-This has not been tested in anything but Angular 8+. It may or may not work in previous versions or subsequent versions of Angular. We would love to support multiple versions, if people with more Angular knowledge would be willing to help us out!
+Starting with the release after 22.0.0, a single version of angular-shepherd supports every Angular version from 14 onward. The library only depends on `Injectable` from `@angular/core`, and it has been verified to build and run on Angular 14 through 22.
 
 ## Installation
 

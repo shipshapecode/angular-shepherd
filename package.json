@@ -35,7 +35,7 @@
     "@angular-devkit/core": "^21.2.30",
     "@angular-devkit/schematics": "^21.2.30",
     "@angular-eslint/builder": "21.4.0",
-    "@angular-eslint/eslint-plugin": "21.4.0",
+    "@angular-eslint/eslint-plugin": "22.7.0",
     "@angular-eslint/eslint-plugin-template": "21.4.0",
     "@angular-eslint/schematics": "^21.4.0",
     "@angular-eslint/template-parser": "^21.4.0",

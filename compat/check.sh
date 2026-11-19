@@ -15,13 +15,14 @@ set -euo pipefail
 VERSION="$1"
 TARBALL="$(cd "$(dirname "$2")" && pwd)/$(basename "$2")"
 WORK_DIR="${3:-$(mktemp -d)}"
+mkdir -p "$WORK_DIR"
+WORK_DIR="$(cd "$WORK_DIR" && pwd)"
 COMPAT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CHROME="${CHROME:-google-chrome}"
 APP="$WORK_DIR/compat-app"
 export NG_CLI_ANALYTICS=false
 
 rm -rf "$APP"
-mkdir -p "$WORK_DIR"
 cd "$WORK_DIR"
 
 echo "::group::ng new (Angular $VERSION)"

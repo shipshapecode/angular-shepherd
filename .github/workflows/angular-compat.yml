@@ -14,12 +14,17 @@ on:
     - cron: '0 10 * * 1'
   workflow_dispatch: {}
 
+permissions:
+  contents: read
+
 jobs:
   pack:
     name: Pack angular-shepherd
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: volta-cli/action@v4
       - run: npm ci
       - run: npm run build_lib
@@ -39,6 +44,8 @@ jobs:
         angular: ['18', '19', '20', '21', '22', 'latest']
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 24

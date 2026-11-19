@@ -24,6 +24,22 @@ This is an Angular wrapper for the [Shepherd](https://github.com/shipshapecode/s
 
 Starting with the release after 22.0.0, a single version of angular-shepherd supports Angular 18 and newer. Every supported Angular major is tested in CI by installing the packed library into a fresh app, building it, and checking that a tour renders (see `compat/check.sh`).
 
+This release uses shepherd.js 16, which requires Node 20 or newer.
+
+### Upgrading to shepherd.js 16
+
+shepherd.js 16 replaced Floating UI with its own positioning engine, so the `floatingUIOptions` step option was removed. A step that still sets it logs a warning and uses default positioning. If you pass `floatingUIOptions` through `addSteps` or `defaultStepOptions`, move to `positionOptions`:
+
+| Before | After |
+| --- | --- |
+| `floatingUIOptions: { strategy: 'fixed' }` | `positionOptions: { strategy: 'fixed' }` |
+| `floatingUIOptions: { middleware: [offset(12)] }` | `positionOptions: { offset: 12 }` |
+| `padding` on `shift()` or `flip()` | `positionOptions: { padding: 8 }` |
+| Leaving out `flip()` | `positionOptions: { flip: false }` |
+| `placement` | `attachTo: { on: 'bottom' }` |
+
+There is no `middleware` option, so other custom Floating UI middleware has no equivalent. See [`StepOptionsPosition`](https://docs.shepherdjs.dev/api/step/interfaces/stepoptionsposition/) for every field.
+
 ## Installation
 
 ```bash

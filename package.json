@@ -58,7 +58,7 @@
     "karma-jasmine-html-reporter": "^2.1.0",
     "ng-packagr": "^21.2.7",
     "prettier": "^3.8.0",
-    "release-plan": "^0.17.0",
+    "release-plan": "^0.20.1",
     "ts-node": "~10.9.2",
     "typescript": "~5.9.0"
   },

@@ -20,8 +20,11 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+  angular-compat:
+    name: Angular Compatibility
+    uses: ./.github/workflows/angular-compat.yml
   automerge:
-    needs: [test]
+    needs: [test, angular-compat]
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write

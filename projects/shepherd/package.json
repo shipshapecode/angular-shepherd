@@ -20,11 +20,10 @@
     "url": "https://github.com/RobbieTheWagner"
   },
   "dependencies": {
-    "shepherd.js": "^15.3.0"
+    "shepherd.js": "^16.0.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=21.0.0",
-    "@angular/core": ">=21.0.0"
+    "@angular/core": ">=18.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

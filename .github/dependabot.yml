@@ -8,3 +8,10 @@ updates:
   open-pull-requests-limit: 10
   labels:
   - dependencies
+  groups:
+    angular:
+      patterns:
+        - "@angular/*"
+        - "@angular-devkit/*"
+        - "@angular-eslint/*"
+        - "ng-packagr"

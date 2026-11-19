@@ -1,0 +1,56 @@
+name: Angular Compatibility
+
+# Installs the packed angular-shepherd into a fresh app on every supported
+# Angular major and checks that it builds and renders a tour. Keep the matrix
+# in sync with peerDependencies in projects/shepherd/package.json.
+#
+# PRs and pushes run this through main.yml (workflow_call), so a dependency
+# that breaks compatibility also blocks Dependabot automerge.
+
+on:
+  workflow_call: {}
+  schedule:
+    # Weekly, so a new Angular major shows up via the `latest` entry.
+    - cron: '0 10 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  pack:
+    name: Pack angular-shepherd
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: volta-cli/action@v4
+      - run: npm ci
+      - run: npm run build_lib
+      - run: mkdir pack && npm pack ./projects/shepherd --pack-destination pack
+      - uses: actions/upload-artifact@v4
+        with:
+          name: angular-shepherd-tarball
+          path: pack/*.tgz
+
+  compat:
+    name: Angular ${{ matrix.angular }}
+    needs: pack
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        angular: ['18', '19', '20', '21', '22', 'latest']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/download-artifact@v4
+        with:
+          name: angular-shepherd-tarball
+          path: pack
+      - run: compat/check.sh "${{ matrix.angular }}" pack/*.tgz "$RUNNER_TEMP/compat"

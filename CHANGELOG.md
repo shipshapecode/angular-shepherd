@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2026-11-19)
+
+* angular-shepherd 23.0.0 (major)
+
+#### :boom: Breaking Change
+* `angular-shepherd`
+  * [#3022](https://github.com/shipshapecode/angular-shepherd/pull/3022) Update Angular deps and shepherd.js 16, support Angular >=18 with CI coverage ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### :rocket: Enhancement
+* `angular-shepherd`
+  * [#2988](https://github.com/shipshapecode/angular-shepherd/pull/2988) Support Angular >= 21 ([@marcosalpereira](https://github.com/marcosalpereira))
+
+#### Committers: 2
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+- [@marcosalpereira](https://github.com/marcosalpereira)
+
 ## Release (2026-02-13)
 
 * angular-shepherd 22.0.0 (major)

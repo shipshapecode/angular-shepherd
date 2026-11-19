@@ -3,20 +3,16 @@ name: Angular Compatibility
 # Installs the packed angular-shepherd into a fresh app on every supported
 # Angular major and checks that it builds and renders a tour. Keep the matrix
 # in sync with peerDependencies in projects/shepherd/package.json.
+#
+# PRs and pushes run this through main.yml (workflow_call), so a dependency
+# that breaks compatibility also blocks Dependabot automerge.
 
 on:
-  pull_request: {}
-  push:
-    branches:
-      - main
+  workflow_call: {}
   schedule:
     # Weekly, so a new Angular major shows up via the `latest` entry.
     - cron: '0 10 * * 1'
   workflow_dispatch: {}
-
-concurrency:
-  group: angular-compat-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   pack:
